@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--    schaltflächen für das menü-->
+
+    <item
+        android:id="@+id/add_tier"
+        android:title="Tier"
+        />
+
+    <item
+        android:id="@+id/add_gruppe"
+        android:title="Gruppe" />
+
+</menu>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--    schaltflächen für das menü-->
+
+    <item
+        android:id="@+id/fuetterung"
+        android:icon="@drawable/mouse"
+        android:title="Fütterung" />
+    <item
+        android:id="@+id/haeutung"
+        android:icon="@drawable/scale"
+        android:title="Häutung" />
+    <item
+        android:id="@+id/arzt_besuch"
+        android:icon="@drawable/doc"
+        android:title="Arzt besuch" />
+
+
+</menu>
