@@ -1,4 +1,4 @@
-package com.example.myreptil.Class
+package com.example.myreptil.data.datamodels
 
 enum class TierartEnum {
     INSEKTEN,

@@ -1,4 +1,4 @@
-package com.example.myreptil.fragmente
+package com.example.myreptil.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,14 +9,13 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.myreptil.R
-import com.example.myreptil.adapter.TierAdapter
-import com.example.myreptil.data.ViewModel
+import com.example.myreptil.adapter.ItemAdapterTier
 import com.example.myreptil.databinding.FragmentTiereBinding
 
 class Fragment_Tiere : Fragment() {
     private lateinit var binding: FragmentTiereBinding
 
-    private val viewModel:ViewModel by activityViewModels()
+    private val viewModel: ViewModel by activityViewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,7 +35,7 @@ class Fragment_Tiere : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel.tierList.observe(viewLifecycleOwner){
-            binding.rvRvLayout.adapter = TierAdapter(it)
+            binding.rvRvLayout.adapter = ItemAdapterTier(it)
 
         }
 

@@ -10,7 +10,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
-import com.example.myreptil.data.ViewModel
+import com.example.myreptil.ui.ViewModel
 import com.example.myreptil.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

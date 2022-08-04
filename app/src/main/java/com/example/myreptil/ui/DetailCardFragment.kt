@@ -1,21 +1,16 @@
-package com.example.myreptil.fragmente
+package com.example.myreptil.ui
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
-import com.example.myreptil.Class.Eintrag
-import com.example.myreptil.Class.Tier
-import com.example.myreptil.Class.TierartEnum
+import com.example.myreptil.data.datamodels.Tier
+import com.example.myreptil.data.datamodels.TierartEnum
 import com.example.myreptil.R
-import com.example.myreptil.data.ViewModel
 import com.example.myreptil.databinding.FragmentDetailCardBinding
-import java.time.LocalDateTime
 
 
 class DetailCardFragment : Fragment() {

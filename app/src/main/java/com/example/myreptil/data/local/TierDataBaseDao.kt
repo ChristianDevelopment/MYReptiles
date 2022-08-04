@@ -2,8 +2,8 @@ package com.example.myreptil.data.local
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.example.myreptil.Class.Eintrag
-import com.example.myreptil.Class.Tier
+import com.example.myreptil.data.datamodels.Eintrag
+import com.example.myreptil.data.datamodels.Tier
 
 @Dao
 interface TierDataBaseDao {

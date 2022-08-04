@@ -4,8 +4,8 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.myreptil.Class.Eintrag
-import com.example.myreptil.Class.Tier
+import com.example.myreptil.data.datamodels.Eintrag
+import com.example.myreptil.data.datamodels.Tier
 
 // Class erbt von RoomDataBase
 

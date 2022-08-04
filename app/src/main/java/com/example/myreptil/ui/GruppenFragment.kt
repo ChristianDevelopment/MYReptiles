@@ -1,4 +1,4 @@
-package com.example.myreptil.fragmente
+package com.example.myreptil.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,9 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.myreptil.Class.TierartEnum
 import com.example.myreptil.R
-import com.example.myreptil.adapter.ItemAdapter
 import com.example.myreptil.databinding.FragmentGruppenBinding
 
 /**
@@ -42,10 +40,10 @@ class GruppenFragment : Fragment() {
 //            findNavController().navigate(GruppenFragmentDirections.actionGruppenFragmentToFragmentGruppenTiere())
 //
 //        }
-//        binding.MTiere.setOnClickListener {
-//
-//            findNavController().navigate(GruppenFragmentDirections.actionGruppenFragmentToFragmentTiere())
-//        }
+        binding.MTiere.setOnClickListener {
+
+            findNavController().navigate(GruppenFragmentDirections.actionGruppenFragmentToFragmentTiere())
+        }
 
     }
 }

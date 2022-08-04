@@ -1,4 +1,4 @@
-package com.example.myreptil.fragmente
+package com.example.myreptil.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater

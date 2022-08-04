@@ -6,12 +6,12 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.myreptil.Class.Tier
-import com.example.myreptil.Class.TierartEnum
+import com.example.myreptil.data.datamodels.Tier
+import com.example.myreptil.data.datamodels.TierartEnum
 import com.example.myreptil.R
 
-class TierAdapter(private val dataset: List<Tier>) :
-    RecyclerView.Adapter<TierAdapter.ItemViewHolder>() {
+class ItemAdapterTier(private val dataset: List<Tier>) :
+    RecyclerView.Adapter<ItemAdapterTier.ItemViewHolder>() {
 
     inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 

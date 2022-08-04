@@ -8,17 +8,17 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
-import com.example.myreptil.Class.Tier
-import com.example.myreptil.Class.TierartEnum
+import com.example.myreptil.data.datamodels.Tier
+import com.example.myreptil.data.datamodels.TierartEnum
 import com.example.myreptil.R
 
 // der Adapter braucht den Context um auf String Resourcen zuzugreifen
 // und die Liste an Jokes um sie für die RecyclerView vorzubereiten
-class ItemAdapter(
+class ItemAdapterGruppe(
     private val context: Context,
     private val dataset: List<Tier>,
     private val pattern_click : (TierartEnum)->Unit
-) : RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
+) : RecyclerView.Adapter<ItemAdapterGruppe.ItemViewHolder>() {
 
     // IDEE VON VIEWHOLDERN
     // der ViewHolder weiß welche Teile des Layouts beim Recycling angepasst werden

@@ -1,8 +1,7 @@
-package com.example.myreptil.Class
+package com.example.myreptil.data.datamodels
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import java.util.*
 
 
 @Entity

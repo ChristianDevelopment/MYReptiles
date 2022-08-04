@@ -8,15 +8,15 @@
 
     <fragment
         android:id="@+id/detailCardFragment2"
-        android:name="com.example.myreptil.fragmente.DetailCardFragment"
+        android:name="com.example.myreptil.ui.DetailCardFragment"
         android:label="DetailCardFragment" />
     <fragment
         android:id="@+id/errorFragment"
-        android:name="com.example.myreptil.fragmente.ErrorFragment"
+        android:name="com.example.myreptil.ui.ErrorFragment"
         android:label="ErrorFragment" />
     <fragment
         android:id="@+id/fragmentFirst2"
-        android:name="com.example.myreptil.fragmente.FragmentFirst"
+        android:name="com.example.myreptil.ui.FragmentFirst"
         android:label="FragmentFirst" >
         <action
             android:id="@+id/action_fragmentFirst2_to_detailCardFragment2"
@@ -27,11 +27,11 @@
     </fragment>
     <fragment
         android:id="@+id/fragment_GruppenTiere"
-        android:name="com.example.myreptil.fragmente.Fragment_GruppenTiere"
+        android:name="com.example.myreptil.ui.Fragment_GruppenTiere"
         android:label="Fragment_GruppenTiere" />
     <fragment
         android:id="@+id/fragment_Tiere"
-        android:name="com.example.myreptil.fragmente.Fragment_Tiere"
+        android:name="com.example.myreptil.ui.Fragment_Tiere"
         android:label="Fragment_Tiere" >
         <action
             android:id="@+id/action_fragment_Tiere_to_gruppenFragment"
@@ -39,11 +39,11 @@
     </fragment>
     <fragment
         android:id="@+id/fuetterungFragment"
-        android:name="com.example.myreptil.fragmente.FuetterungFragment"
+        android:name="com.example.myreptil.ui.FuetterungFragment"
         android:label="FuetterungFragment" />
     <fragment
         android:id="@+id/gruppenFragment"
-        android:name="com.example.myreptil.fragmente.GruppenFragment"
+        android:name="com.example.myreptil.ui.GruppenFragment"
         android:label="GruppenFragment" >
         <action
             android:id="@+id/action_gruppenFragment_to_fragment_GruppenTiere"
@@ -54,15 +54,15 @@
     </fragment>
     <fragment
         android:id="@+id/huattungFragment"
-        android:name="com.example.myreptil.fragmente.HuattungFragment"
+        android:name="com.example.myreptil.ui.HuattungFragment"
         android:label="HuattungFragment" />
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.example.myreptil.fragmente.SearchFragment"
+        android:name="com.example.myreptil.ui.SearchFragment"
         android:label="SearchFragment" />
     <fragment
         android:id="@+id/arztBesuchFragment"
-        android:name="com.example.myreptil.fragmente.ArztBesuchFragment"
+        android:name="com.example.myreptil.ui.ArztBesuchFragment"
         android:label="fragment_arzt_besuch"
         tools:layout="@layout/fragment_arzt_besuch" />
     <activity
@@ -72,11 +72,11 @@
         tools:layout="@layout/fragment_first" />
     <fragment
         android:id="@+id/gruppeTiereSaveFragment2"
-        android:name="com.example.myreptil.fragmente.gruppeTiereSaveFragment"
+        android:name="com.example.myreptil.ui.gruppeTiereSaveFragment"
         android:label="fragment_gruppe_tiere_save"
         tools:layout="@layout/fragment_gruppe_tiere_save" />
     <fragment
         android:id="@+id/gruppeSave"
-        android:name="com.example.myreptil.fragmente.gruppeSave"
+        android:name="com.example.myreptil.ui.gruppeSave"
         android:label="gruppeSave" />
 </navigation>
