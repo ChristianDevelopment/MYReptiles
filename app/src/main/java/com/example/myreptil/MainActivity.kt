@@ -6,12 +6,16 @@ import android.view.MenuItem
 import android.view.View
 import android.view.WindowManager
 import android.widget.PopupMenu
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import com.example.myreptil.data.ViewModel
 import com.example.myreptil.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    private val viewModel : ViewModel by viewModels()
 
     private lateinit var binding: ActivityMainBinding
 

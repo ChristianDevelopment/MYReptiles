@@ -4,11 +4,12 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.myreptil.Class.Eintrag
 import com.example.myreptil.Class.Tier
 
 // Class erbt von RoomDataBase
 
-@Database(entities = [Tier::class], version = 1)
+@Database(entities = [Tier::class , Eintrag::class], version = 1)
 abstract class TierDataBase : RoomDatabase() {
 
     // verknüpft DataBank mit der Dao

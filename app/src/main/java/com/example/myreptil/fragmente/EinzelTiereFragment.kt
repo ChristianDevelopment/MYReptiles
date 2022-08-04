@@ -1,7 +1,6 @@
 package com.example.myreptil.fragmente
 
 import android.os.Bundle
-import android.text.Layout
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,6 +29,7 @@ class Fragment_Tiere : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_tiere, container, false)
+
         return binding.root
     }
 

@@ -7,11 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.myreptil.R
-import com.example.myreptil.databinding.FragmentFirstBinding
+import com.example.myreptil.databinding.FragmentArztBesuchBinding
 
 class ArztBesuchFragment : Fragment() {
 
-    private lateinit var binding: FragmentFirstBinding
+    private lateinit var binding: FragmentArztBesuchBinding
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

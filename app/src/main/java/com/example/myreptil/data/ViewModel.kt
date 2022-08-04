@@ -4,8 +4,13 @@ import android.app.Application
 import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.viewModelScope
 import com.example.myreptil.Class.Eintrag
+import com.example.myreptil.Class.Tier
 import com.example.myreptil.data.local.getDataBase
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import java.time.LocalDateTime
 
 class ViewModel(application: Application) : AndroidViewModel(application) {
@@ -16,7 +21,7 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
 
     // variable speichert eine Repository Instance
 
-    private val repository = Repository(dataBase)   //<-object
+   private val repository = Repository(dataBase)   //<-object
 
     // speichert in der variable die tierliste vom Repository ab
 
@@ -48,25 +53,12 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
         return filterEntries
     }
 
+     fun saveTierData (tier: Tier) {
 
+         viewModelScope.launch {
 
+             repository.insert(tier)
 
-
-
-
-
-//    TODO:
-//     fun hinzufügen ,[gruppen tier] timelines futter,
-//     löschen [gruppen tier] timelines futter,
-//     speichern [gruppen tier] timelines futter,
-//     laden [gruppen tier] timelines futter,
-//     update [gruppen tier] timelines futter,
-//     rechner datum ,
-//     such filter fun ,
-//     ?api call(qr code)datasource wenn zeit über ist?,Daten bank,
-
-//    TODO:
-//     Variablen,
-//     Liste die Tiere tierart gruppe speichert ,
-//     bild speicherung,
+         }
+     }
 }

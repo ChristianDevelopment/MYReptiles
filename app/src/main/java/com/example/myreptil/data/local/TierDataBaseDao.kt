@@ -11,7 +11,7 @@ interface TierDataBaseDao {
     // diese funktion selektiert alle aus den room befindlichen daten von der data liste Tier
 
     @Query("SELECT * FROM Tier")
-    fun getAllFromTierTable(): List<Tier>
+    fun getAllFromTierTable(): LiveData <List<Tier>>
 
     // diese funktion selektiert alle aus den room befindlichen daten von der data liste Eintrag
 

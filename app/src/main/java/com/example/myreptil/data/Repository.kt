@@ -8,7 +8,7 @@ import com.example.myreptil.data.local.TierDataBase
 
 class Repository(private val dataBase: TierDataBase) {
 
-    val tierListe: List<Tier> = dataBase.tierDataBaseDao.getAllFromTierTable()
+    val tierListe: LiveData <List<Tier>> = dataBase.tierDataBaseDao.getAllFromTierTable()
 
 
     suspend fun insert(tier: Tier) {
