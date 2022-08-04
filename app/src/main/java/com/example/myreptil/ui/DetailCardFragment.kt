@@ -15,7 +15,7 @@ import com.example.myreptil.databinding.FragmentDetailCardBinding
 
 class DetailCardFragment : Fragment() {
 
-    private val viewModel : ViewModel by activityViewModels()
+    private val viewModel: ViewModel by activityViewModels()
 
     private lateinit var binding: FragmentDetailCardBinding
 
@@ -41,17 +41,45 @@ class DetailCardFragment : Fragment() {
 
             val race = binding.tiTierart.text.toString().lowercase()
 
-            var tierartEnum = when (race){
+            var tierartEnum = when (race) {
 
 
                 // für jede tierart
 
                 //TODO fertig machen nach kurs
 
-                "spinne"-> TierartEnum.SPINNEN
-                "spinnen"-> TierartEnum.SPINNEN
-                "echse"-> TierartEnum.ECHSEN
-                "echsen"-> TierartEnum.ECHSEN
+//                INSEKTEN,
+                "insekt" -> TierartEnum.INSEKTEN
+                "insekten" -> TierartEnum.INSEKTEN
+
+//                SCHLANGEN,
+                    "schlange" -> TierartEnum.SCHLANGEN
+                "schlangen" -> TierartEnum.SCHLANGEN
+
+//                ECHSEN,
+                "echse" -> TierartEnum.ECHSEN
+                "echsen" -> TierartEnum.ECHSEN
+
+//                FROESCHE,
+                "frosch" -> TierartEnum.FROESCHE
+                "frösche" -> TierartEnum.FROESCHE
+
+//                SCHMETTERLINGE,
+                "schmetterling" -> TierartEnum.SCHMETTERLINGE
+                "schmetterlinge" -> TierartEnum.SCHMETTERLINGE
+
+//                SKORPIONE,
+                "skorpion" -> TierartEnum.SKORPIONE
+                "skorpione" -> TierartEnum.SKORPIONE
+
+//                AMPHIBIEN,
+                "amphibie" -> TierartEnum.AMPHIBIEN
+                "amphiebien" -> TierartEnum.AMPHIBIEN
+
+//                    SPINNE,
+                "spinne" -> TierartEnum.SPINNEN
+                "spinnen" -> TierartEnum.SPINNEN
+
 
                 else -> TierartEnum.NOTHING
 
@@ -67,7 +95,7 @@ class DetailCardFragment : Fragment() {
             //            )
 
             val tier = Tier(
-                0, 0, name,tierartEnum, "", "", "",
+                0, 0, name, tierartEnum, "", "", "",
                 0.0, 0.0, 0.0, 0.0,
                 0.0, 0.0, 0.0, "", "", 0.0,
                 0.0, 0, "", 0.0, "", ""

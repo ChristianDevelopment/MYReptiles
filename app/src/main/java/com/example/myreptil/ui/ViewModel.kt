@@ -15,8 +15,8 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
     private val dataBase = getDataBase(application)
 
     // variable speichert eine Repository Instance
-
-   private val repository = Repository(dataBase)   //<-object
+//TODO v Private hinzufügen bei val
+    val repository = Repository(dataBase)   //<-object
 
     // speichert in der variable die tierliste vom Repository ab
 
