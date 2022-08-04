@@ -5,18 +5,22 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myreptil.data.datamodels.Tier
 import com.example.myreptil.data.datamodels.TierartEnum
 import com.example.myreptil.R
+import com.example.myreptil.databinding.FragmentTiereBinding
+import com.example.myreptil.ui.Fragment_TiereDirections
 
 class ItemAdapterTier(private val dataset: List<Tier>) :
     RecyclerView.Adapter<ItemAdapterTier.ItemViewHolder>() {
 
     inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        val text : TextView = itemView.findViewById(R.id.tv_pattern)
-        val image : ImageView = itemView.findViewById(R.id.iv_pattern)
+        val text: TextView = itemView.findViewById(R.id.tv_pattern)
+        val image: ImageView = itemView.findViewById(R.id.iv_pattern)
 
     }
 
@@ -25,7 +29,8 @@ class ItemAdapterTier(private val dataset: List<Tier>) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
 
-        val itemLayout = LayoutInflater.from(parent.context).inflate(R.layout.pattern,parent,false)
+        val itemLayout =
+            LayoutInflater.from(parent.context).inflate(R.layout.pattern, parent, false)
 
         return ItemViewHolder(itemLayout)
 
@@ -37,7 +42,8 @@ class ItemAdapterTier(private val dataset: List<Tier>) :
 
         holder.text.text = tier.Name //<- Liefert name des Tieres
 
-        val imageRes = when(tier.Tierart){ //<- definiert Bild durch dazugehörige Tierart
+
+        val imageRes = when (tier.Tierart) { //<- definiert Bild durch dazugehörige Tierart
             TierartEnum.INSEKTEN -> R.drawable.insektwarnschild
             TierartEnum.SCHLANGEN -> R.drawable.schlangewarnschild
             TierartEnum.ECHSEN -> R.drawable.echsewarnschild
@@ -49,6 +55,13 @@ class ItemAdapterTier(private val dataset: List<Tier>) :
             TierartEnum.NOTHING -> R.drawable.blankwarnschild
         }
         holder.image.setImageResource(imageRes)  //<- Liefert Bild des Tieres
+
+        holder.image.setOnClickListener {
+
+            holder.itemView.findNavController()
+                .navigate(Fragment_TiereDirections.actionFragmentTiereToShowDetailCardFragment(position))
+        }
+
     }
 
     //liefert die anzahl der Tier (Liste)

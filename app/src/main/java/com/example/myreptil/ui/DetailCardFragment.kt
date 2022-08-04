@@ -39,6 +39,25 @@ class DetailCardFragment : Fragment() {
             //TODO input felder Auslesen
             val name = binding.tiName.text.toString()
 
+            val race = binding.tiTierart.text.toString().lowercase()
+
+            var tierartEnum = when (race){
+
+
+                // für jede tierart
+
+                //TODO fertig machen nach kurs
+
+                "spinne"-> TierartEnum.SPINNEN
+                "spinnen"-> TierartEnum.SPINNEN
+                "echse"-> TierartEnum.ECHSEN
+                "echsen"-> TierartEnum.ECHSEN
+
+                else -> TierartEnum.NOTHING
+
+            }
+
+
             // bisher nur beispielwerte (frei eintragbar später)
 
             //            var newEntry = Eintrag(
@@ -48,7 +67,7 @@ class DetailCardFragment : Fragment() {
             //            )
 
             val tier = Tier(
-                0, 0, name, TierartEnum.SPINNEN, "", "", "",
+                0, 0, name,tierartEnum, "", "", "",
                 0.0, 0.0, 0.0, 0.0,
                 0.0, 0.0, 0.0, "", "", 0.0,
                 0.0, 0, "", 0.0, "", ""

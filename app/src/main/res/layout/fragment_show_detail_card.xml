@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        tools:context=".MainActivity">
+
+
+        <TextView
+            android:id="@+id/HeadLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/pattaya"
+            android:shadowColor="#000000"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="5"
+            android:text="My Reptil"
+            android:textColor="#AFEF08"
+            android:textSize="48sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/MTiere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/pattaya"
+            android:shadowColor="#000000"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="5"
+            android:text="Tiere"
+            android:textColor="#89AC2E"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/MGruppe"
+            app:layout_constraintTop_toBottomOf="@+id/HeadLine" />
+
+        <TextView
+            android:id="@+id/MGruppe"
+            android:layout_width="92dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/pattaya"
+            android:shadowColor="#000000"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="5"
+            android:text="Gruppe"
+            android:textColor="#89AC2E"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/HeadLine" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="325dp"
+            android:layout_height="568dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="#FBC02D"
+            app:cardCornerRadius="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/HeadLine"
+            app:strokeColor="@color/black"
+            app:strokeWidth="4sp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ti_generation"
+                    android:layout_width="158dp"
+                    android:layout_height="17dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="85dp"
+                    android:backgroundTint="#D32F2F"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_generation"
+                    app:layout_constraintTop_toBottomOf="@+id/ti_zucht" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ti_let_haeutung"
+                    android:layout_width="158dp"
+                    android:layout_height="17dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="60dp"
+                    android:backgroundTint="#D32F2F"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_let_haeutung"
+                    app:layout_constraintTop_toBottomOf="@+id/ti_generation" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ti_gewicht"
+                    android:layout_width="158dp"
+                    android:layout_height="17dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="100dp"
+                    android:backgroundTint="#D32F2F"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_gewicht"
+                    app:layout_constraintTop_toBottomOf="@+id/ti_geschlecht" />
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="220dp"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="#FBC02D"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/image__" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/pattaya"
+                    android:text=" Name :"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_tierart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/pattaya"
+                    android:text="Tierart : "
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+                <TextView
+                    android:id="@+id/tv_deu_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/pattaya"
+                    android:text="Deutscher Name :"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_tierart" />
+
+                <TextView
+                    android:id="@+id/tv_erworben"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/pattaya"
+                    android:text="Erworben am :"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_geboren" />
+
+                <TextView
+                    android:id="@+id/tv_fue_intervall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/pattaya"
+                    android:text="Fütterungs Intervall :"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_let_fuetterung" />
+
+                <TextView
+                    android:id="@+id/tv_let_arzt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/pattaya"
+                    android:text="Letzter Arzt besuch :"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_arzt" />
+
+                <TextView
+                    android:id="@+id/tv_verstorben"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/pattaya"
+                    android:text="Verstorben am :"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_erworben" />
+
+                <TextView
+                    android:id="@+id/tv_anmerkung"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/pattaya"
+                    android:text="Anmerkungen / Zusatz :"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_let_ereignis" />
+
+                <TextView
+                    android:id="@+id/tv_let_ereignis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/pattaya"
+                    android:text="Letztes Ereignis :"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_let_arzt" />
+
+                <TextView
+                    android:id="@+id/tv_zucht"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/pattaya"
+                    android:text="Zuchtlinie :"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_verstorben" />
+
+                <TextView
+                    android:id="@+id/tv_let_fuetterung"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/pattaya"
+                    android:text="Letzte Fütterung :"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_let_haeutung" />
+
+                <TextView
+                    android:id="@+id/tv_generation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/pattaya"
+                    android:text="Generation :"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_zucht" />
+
+                <TextView
+                    android:id="@+id/tv_arzt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/pattaya"
+                    android:text="Tierarzt :"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_fue_intervall" />
+
+                <TextView
+                    android:id="@+id/tv_let_haeutung"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/pattaya"
+                    android:text="Letzte Häutung :"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_generation" />
+
+                <TextView
+                    android:id="@+id/tv_geboren"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/pattaya"
+                    android:text="Geboren am :"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_groeße" />
+
+                <TextView
+                    android:id="@+id/tv_groeße"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/pattaya"
+                    android:text="Größe :"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_gewicht" />
+
+                <TextView
+                    android:id="@+id/tv_lat_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/pattaya"
+                    android:text="Lateinischer Name :"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_deu_name" />
+
+                <TextView
+                    android:id="@+id/tv_geschlecht"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/pattaya"
+                    android:text="Geschlecht :"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_alter" />
+
+                <TextView
+                    android:id="@+id/tv_gewicht"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/pattaya"
+                    android:text="Gewicht :"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_geschlecht" />
+
+                <TextView
+                    android:id="@+id/tv_alter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/pattaya"
+                    android:text="Alter :"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_lat_name" />
+
+                <TextView
+                    android:id="@+id/tv_Info"
+                    android:layout_width="89dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="140dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/pattaya"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="5"
+                    android:shadowDy="5"
+                    android:shadowRadius="5"
+                    android:text="INFO"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toStartOf="@+id/imageButton"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ti_name"
+                    android:layout_width="158dp"
+                    android:layout_height="18dp"
+                    android:layout_marginTop="44dp"
+                    android:layout_marginEnd="120dp"
+                    android:backgroundTint="#D32F2F"
+                    android:textColor="#000000"
+                    android:textColorHighlight="#000000"
+                    android:textColorLink="#000000"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/tv_name"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ti_tierart"
+                    android:layout_width="158dp"
+                    android:layout_height="18dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="105dp"
+                    android:backgroundTint="#D32F2F"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_tierart"
+                    app:layout_constraintTop_toBottomOf="@+id/ti_name" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ti_deu_name"
+                    android:layout_width="158dp"
+                    android:layout_height="18dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="55dp"
+                    android:backgroundTint="#D32F2F"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_deu_name"
+                    app:layout_constraintTop_toBottomOf="@+id/ti_tierart" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ti_lat_name"
+                    android:layout_width="158dp"
+                    android:layout_height="18dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="45dp"
+                    android:backgroundTint="#D32F2F"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_lat_name"
+                    app:layout_constraintTop_toBottomOf="@+id/ti_deu_name" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ti_alter"
+                    android:layout_width="158dp"
+                    android:layout_height="18dp"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="#D32F2F"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/tv_alter"
+                    app:layout_constraintTop_toBottomOf="@+id/ti_lat_name" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ti_geschlecht"
+                    android:layout_width="158dp"
+                    android:layout_height="17dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="90dp"
+                    android:backgroundTint="#D32F2F"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_geschlecht"
+                    app:layout_constraintTop_toBottomOf="@+id/ti_alter" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ti_groeße"
+                    android:layout_width="158dp"
+                    android:layout_height="17dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="110dp"
+                    android:backgroundTint="#D32F2F"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_groeße"
+                    app:layout_constraintTop_toBottomOf="@+id/ti_gewicht" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ti_geboren"
+                    android:layout_width="158dp"
+                    android:layout_height="17dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="80dp"
+                    android:backgroundTint="#D32F2F"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_geboren"
+                    app:layout_constraintTop_toBottomOf="@+id/ti_groeße" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ti_erworben"
+                    android:layout_width="158dp"
+                    android:layout_height="17dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="60dp"
+                    android:backgroundTint="#D32F2F"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/tv_erworben"
+                    app:layout_constraintTop_toBottomOf="@+id/ti_geboren" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ti_verstorben"
+                    android:layout_width="158dp"
+                    android:layout_height="17dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginEnd="65dp"
+                    android:backgroundTint="#D32F2F"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_verstorben"
+                    app:layout_constraintTop_toBottomOf="@+id/ti_erworben" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ti_zucht"
+                    android:layout_width="158dp"
+                    android:layout_height="17dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="90dp"
+                    android:backgroundTint="#D32F2F"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_zucht"
+                    app:layout_constraintTop_toBottomOf="@+id/ti_verstorben" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ti_let_fuetterung"
+                    android:layout_width="158dp"
+                    android:layout_height="17dp"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="#D32F2F"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/tv_let_fuetterung"
+                    app:layout_constraintTop_toBottomOf="@+id/ti_let_haeutung" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ti_fue_intervall"
+                    android:layout_width="158dp"
+                    android:layout_height="17dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="36dp"
+                    android:backgroundTint="#D32F2F"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_fue_intervall"
+                    app:layout_constraintTop_toBottomOf="@+id/ti_let_fuetterung" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ti_arzt"
+                    android:layout_width="158dp"
+                    android:layout_height="17dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="100dp"
+                    android:backgroundTint="#D32F2F"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_arzt"
+                    app:layout_constraintTop_toBottomOf="@+id/ti_fue_intervall" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ti_let_arzt"
+                    android:layout_width="158dp"
+                    android:layout_height="17dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="45dp"
+                    android:backgroundTint="#D32F2F"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_let_arzt"
+                    app:layout_constraintTop_toBottomOf="@+id/ti_arzt" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ti_let_ereignis"
+                    android:layout_width="158dp"
+                    android:layout_height="17dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="60dp"
+                    android:backgroundTint="#D32F2F"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_let_ereignis"
+                    app:layout_constraintTop_toBottomOf="@+id/ti_let_arzt" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ti_anmerkung"
+                    android:layout_width="158dp"
+                    android:layout_height="17dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="24dp"
+                    android:backgroundTint="#D32F2F"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_anmerkung"
+                    app:layout_constraintTop_toBottomOf="@+id/ti_let_ereignis" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
