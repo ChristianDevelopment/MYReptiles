@@ -85,7 +85,10 @@
             android:layout_marginTop="55dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/HeadLine" />
+            app:layout_constraintTop_toBottomOf="@+id/HeadLine"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
+            tools:listitem="@layout/pattern" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/sucheConstraint"

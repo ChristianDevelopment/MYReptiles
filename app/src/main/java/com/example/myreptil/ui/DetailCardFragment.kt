@@ -53,7 +53,7 @@ class DetailCardFragment : Fragment() {
                 "insekten" -> TierartEnum.INSEKTEN
 
 //                SCHLANGEN,
-                    "schlange" -> TierartEnum.SCHLANGEN
+                "schlange" -> TierartEnum.SCHLANGEN
                 "schlangen" -> TierartEnum.SCHLANGEN
 
 //                ECHSEN,

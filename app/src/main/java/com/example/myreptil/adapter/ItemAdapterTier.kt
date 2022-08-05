@@ -11,10 +11,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.myreptil.data.datamodels.Tier
 import com.example.myreptil.data.datamodels.TierartEnum
 import com.example.myreptil.R
+import com.example.myreptil.databinding.FragmentSearchBinding
 import com.example.myreptil.databinding.FragmentTiereBinding
 import com.example.myreptil.ui.Fragment_TiereDirections
+import com.example.myreptil.ui.SearchFragmentDirections
 
-class ItemAdapterTier(private val dataset: List<Tier>) :
+class ItemAdapterTier(private val dataset: List<Tier>, private val callSearchFragment: Boolean) :
     RecyclerView.Adapter<ItemAdapterTier.ItemViewHolder>() {
 
     inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -54,14 +56,33 @@ class ItemAdapterTier(private val dataset: List<Tier>) :
             TierartEnum.SPINNEN -> R.drawable.spinnewarnschild
             TierartEnum.NOTHING -> R.drawable.blankwarnschild
         }
+
+
+//TODO lars di nerven fertig machen
+
         holder.image.setImageResource(imageRes)  //<- Liefert Bild des Tieres
+        if (callSearchFragment) {
+            holder.image.setOnClickListener {
 
-        holder.image.setOnClickListener {
+                holder.itemView.findNavController()
+                    .navigate(
+                        SearchFragmentDirections.actionSearchFragmentToShowDetailCardFragment(
+                            tier.id
+                        )
+                    )
+            }
 
-            holder.itemView.findNavController()
-                .navigate(Fragment_TiereDirections.actionFragmentTiereToShowDetailCardFragment(position))
+        } else {
+
+
+            holder.image.setOnClickListener {
+
+                holder.itemView.findNavController()
+                    .navigate(
+                        Fragment_TiereDirections.actionFragmentTiereToShowDetailCardFragment(tier.id)
+                    )
+            }
         }
-
     }
 
     //liefert die anzahl der Tier (Liste)

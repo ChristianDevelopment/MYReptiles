@@ -90,7 +90,7 @@ class Repository(private val dataBase: TierDataBase) {
     // funktion für den suchfilter der suchseite
 
     fun search(suchBegriff: String): List<Tier> {
-
+Log.d("hallo" , tierListe.value!!.size.toString())
         var filterList = tierListe.value!!.filter {
             it.wortFilter(suchBegriff)
         }

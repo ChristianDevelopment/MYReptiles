@@ -1,6 +1,7 @@
 package com.example.myreptil.ui
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -30,11 +31,12 @@ class ShowDetailCardFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        var tierIndex = requireArguments().getInt("tierindex")
+        var tierId = requireArguments().getLong("tierId")
 
-        var tier = viewModel.tierList.value!![tierIndex]
+        var tier = viewModel.tierList.value!!.find { it.id == tierId }
+        Log.d("bla",tier.toString())
 
-        val imageRes = when (tier.Tierart) { //<- definiert Bild durch dazugehörige Tierart
+        val imageRes = when (tier?.Tierart) { //<- definiert Bild durch dazugehörige Tierart
             TierartEnum.INSEKTEN -> R.drawable.insektwarnschild
             TierartEnum.SCHLANGEN -> R.drawable.schlangewarnschild
             TierartEnum.ECHSEN -> R.drawable.echsewarnschild
@@ -43,7 +45,8 @@ class ShowDetailCardFragment : Fragment() {
             TierartEnum.SKORPIONE -> R.drawable.skorpionwarnschild
             TierartEnum.AMPHIBIEN -> R.drawable.amphibienwarnschild
             TierartEnum.SPINNEN -> R.drawable.spinnewarnschild
-            TierartEnum.NOTHING -> R.drawable.blankwarnschild
+
+            else -> R.drawable.blankwarnschild
         }
 
         binding.imageButton.setImageResource(imageRes)

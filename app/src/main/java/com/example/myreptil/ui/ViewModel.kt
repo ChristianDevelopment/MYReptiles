@@ -15,15 +15,17 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
     private val dataBase = getDataBase(application)
 
     // variable speichert eine Repository Instance
-//TODO v Private hinzufügen bei val
-    val repository = Repository(dataBase)   //<-object
+
+    private val repository = Repository(dataBase)   //<-object
 
     // speichert in der variable die tierliste vom Repository ab
 
     val tierList = repository.tierListe  //<- tierListe vom Repository
 
+    fun search(suchBegriff: String): List<Tier> {
 
-
+        return repository.search(suchBegriff)
+    }
      fun saveTierData (tier: Tier) {
 
          viewModelScope.launch {

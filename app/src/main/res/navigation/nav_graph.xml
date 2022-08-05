@@ -62,7 +62,11 @@
     <fragment
         android:id="@+id/searchFragment"
         android:name="com.example.myreptil.ui.SearchFragment"
-        android:label="SearchFragment" />
+        android:label="SearchFragment" >
+        <action
+            android:id="@+id/action_searchFragment_to_showDetailCardFragment"
+            app:destination="@id/showDetailCardFragment" />
+    </fragment>
     <fragment
         android:id="@+id/arztBesuchFragment"
         android:name="com.example.myreptil.ui.ArztBesuchFragment"
@@ -87,7 +91,7 @@
         android:name="com.example.myreptil.ui.ShowDetailCardFragment"
         android:label="ShowDetailCardFragment" >
         <argument
-            android:name="tierindex"
-            app:argType="integer" />
+            android:name="tierId"
+            app:argType="long" />
     </fragment>
 </navigation>
