@@ -94,7 +94,7 @@
                     android:layout_height="17dp"
                     android:layout_marginTop="9dp"
                     android:layout_marginEnd="85dp"
-                    android:backgroundTint="#D32F2F"
+                    android:backgroundTint="#000000"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tv_generation"
                     app:layout_constraintTop_toBottomOf="@+id/ti_zucht" />
@@ -105,7 +105,7 @@
                     android:layout_height="17dp"
                     android:layout_marginTop="9dp"
                     android:layout_marginEnd="60dp"
-                    android:backgroundTint="#D32F2F"
+                    android:backgroundTint="#000000"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tv_let_haeutung"
                     app:layout_constraintTop_toBottomOf="@+id/ti_generation" />
@@ -116,7 +116,7 @@
                     android:layout_height="17dp"
                     android:layout_marginTop="12dp"
                     android:layout_marginEnd="100dp"
-                    android:backgroundTint="#D32F2F"
+                    android:backgroundTint="#000000"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tv_gewicht"
                     app:layout_constraintTop_toBottomOf="@+id/ti_geschlecht" />
@@ -417,6 +417,7 @@
                     android:layout_height="18dp"
                     android:layout_marginTop="44dp"
                     android:layout_marginEnd="120dp"
+                    android:backgroundTint="#000000"
                     android:textSize="12sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
@@ -429,7 +430,7 @@
                     android:layout_height="18dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="105dp"
-                    android:backgroundTint="#D32F2F"
+                    android:backgroundTint="#000000"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tv_tierart"
                     app:layout_constraintTop_toBottomOf="@+id/ti_name" />
@@ -440,7 +441,7 @@
                     android:layout_height="18dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="55dp"
-                    android:backgroundTint="#D32F2F"
+                    android:backgroundTint="#000000"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tv_deu_name"
                     app:layout_constraintTop_toBottomOf="@+id/ti_tierart" />
@@ -451,7 +452,7 @@
                     android:layout_height="18dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="45dp"
-                    android:backgroundTint="#D32F2F"
+                    android:backgroundTint="#000000"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tv_lat_name"
                     app:layout_constraintTop_toBottomOf="@+id/ti_deu_name" />
@@ -461,7 +462,7 @@
                     android:layout_width="158dp"
                     android:layout_height="18dp"
                     android:layout_marginTop="8dp"
-                    android:backgroundTint="#D32F2F"
+                    android:backgroundTint="#000000"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toEndOf="@+id/tv_alter"
@@ -473,7 +474,7 @@
                     android:layout_height="17dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="90dp"
-                    android:backgroundTint="#D32F2F"
+                    android:backgroundTint="#000000"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tv_geschlecht"
                     app:layout_constraintTop_toBottomOf="@+id/ti_alter" />
@@ -484,7 +485,7 @@
                     android:layout_height="17dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="110dp"
-                    android:backgroundTint="#D32F2F"
+                    android:backgroundTint="#000000"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tv_groeße"
                     app:layout_constraintTop_toBottomOf="@+id/ti_gewicht" />
@@ -495,7 +496,7 @@
                     android:layout_height="17dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="80dp"
-                    android:backgroundTint="#D32F2F"
+                    android:backgroundTint="#000000"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tv_geboren"
                     app:layout_constraintTop_toBottomOf="@+id/ti_groeße" />
@@ -506,7 +507,7 @@
                     android:layout_height="17dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="60dp"
-                    android:backgroundTint="#D32F2F"
+                    android:backgroundTint="#000000"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toEndOf="@+id/tv_erworben"
@@ -518,7 +519,7 @@
                     android:layout_height="17dp"
                     android:layout_marginTop="11dp"
                     android:layout_marginEnd="65dp"
-                    android:backgroundTint="#D32F2F"
+                    android:backgroundTint="#000000"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tv_verstorben"
                     app:layout_constraintTop_toBottomOf="@+id/ti_erworben" />
@@ -529,7 +530,7 @@
                     android:layout_height="17dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="90dp"
-                    android:backgroundTint="#D32F2F"
+                    android:backgroundTint="#000000"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tv_zucht"
                     app:layout_constraintTop_toBottomOf="@+id/ti_verstorben" />
@@ -539,7 +540,7 @@
                     android:layout_width="158dp"
                     android:layout_height="17dp"
                     android:layout_marginTop="8dp"
-                    android:backgroundTint="#D32F2F"
+                    android:backgroundTint="#000000"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toEndOf="@+id/tv_let_fuetterung"
@@ -551,7 +552,7 @@
                     android:layout_height="17dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="36dp"
-                    android:backgroundTint="#D32F2F"
+                    android:backgroundTint="#000000"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tv_fue_intervall"
                     app:layout_constraintTop_toBottomOf="@+id/ti_let_fuetterung" />
@@ -562,7 +563,7 @@
                     android:layout_height="17dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="100dp"
-                    android:backgroundTint="#D32F2F"
+                    android:backgroundTint="#000000"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tv_arzt"
                     app:layout_constraintTop_toBottomOf="@+id/ti_fue_intervall" />
@@ -573,7 +574,7 @@
                     android:layout_height="17dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="45dp"
-                    android:backgroundTint="#D32F2F"
+                    android:backgroundTint="#000000"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tv_let_arzt"
                     app:layout_constraintTop_toBottomOf="@+id/ti_arzt" />
@@ -584,19 +585,20 @@
                     android:layout_height="17dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="60dp"
-                    android:backgroundTint="#D32F2F"
+                    android:backgroundTint="#000000"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tv_let_ereignis"
                     app:layout_constraintTop_toBottomOf="@+id/ti_let_arzt" />
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/ti_anmerkung"
-                    android:layout_width="158dp"
+                    android:layout_width="120dp"
                     android:layout_height="17dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="8dp"
                     android:layout_marginEnd="24dp"
-                    android:backgroundTint="#D32F2F"
+                    android:backgroundTint="#000000"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toEndOf="@+id/tv_anmerkung"
                     app:layout_constraintTop_toBottomOf="@+id/ti_let_ereignis" />
 
