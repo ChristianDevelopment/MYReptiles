@@ -34,7 +34,6 @@ data class Tier(
 ) {
     //TODO überlegen der anderen typen überprüfung
     fun wortFilter(suchBegriff: String,ignoreCase: Boolean=true): Boolean {
-//        TODO all the way für strings machen
 
         return  Name.contains(suchBegriff,ignoreCase) ||
                 Tierart.name.contains(suchBegriff,ignoreCase) ||

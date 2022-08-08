@@ -40,6 +40,25 @@ class DetailCardFragment : Fragment() {
             //TODO input felder Auslesen
             // TODO NOCH MACHEN für alle eigenschaften erstellen
             val name = binding.tiName.text.toString()
+            var CustomTierart = binding.tiTierart.text.toString()
+            var DeutscherName = binding.tiDeuName.text.toString()
+            var LateinischerName= binding.tiDeuName.text.toString()
+            val Alter = binding.tiAlter.text.toString().toDoubleOrNull()
+//            var Geschlecht: Double,
+//            val Gewicht: Double,
+//            val Groesse: Double,
+//            var Geboren: Double,
+//            var Erworben: Double,
+//            var Verstorben: Double,
+            var Zuchtlinie = binding.tiZucht.text.toString()
+            var Generation = binding.tiGeneration.text.toString()
+//            val LetzteHaeutung: Double,
+//            val LetzteFuetterung: Double,
+//            val FuetterungsIntervall = binding.tiFueIntervall.toString()
+            val Tierarzt = binding.tiArzt.text.toString()
+//            val LetzterArztbesuch: Double,
+            val LetztesEreignis = binding.tiLetEreignis.text.toString()
+            val Anmerkung = binding.tiAnmerkung.text.toString()
 
             val race = binding.tiTierart.text.toString().lowercase()
 

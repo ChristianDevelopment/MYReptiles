@@ -4,13 +4,18 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import com.example.myreptil.data.datamodels.Eintrag
 import com.example.myreptil.data.datamodels.Gruppe
 import com.example.myreptil.data.datamodels.Tier
+import retrofit2.Converter
 
 // Class erbt von RoomDataBase
 
-@Database(entities = [Tier::class , Eintrag::class , Gruppe::class], version = 1)
+@Database(entities = [Tier::class, Eintrag::class, Gruppe::class], version = 1)
+
+@TypeConverters(Converters::class)
+
 abstract class TierDataBase : RoomDatabase() {
 
     // verknüpft DataBank mit der Dao

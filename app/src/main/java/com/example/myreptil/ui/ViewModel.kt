@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.myreptil.data.Repository
+import com.example.myreptil.data.datamodels.Gruppe
 import com.example.myreptil.data.datamodels.Tier
 import com.example.myreptil.data.local.getDataBase
 import kotlinx.coroutines.launch
@@ -26,6 +27,8 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
 
         return repository.search(suchBegriff)
     }
+
+    // ruft die Funktion Speichern aus der Datenbank auf (über das Repository (aus dem DAO) )
      fun saveTierData (tier: Tier) {
 
          viewModelScope.launch {
@@ -34,4 +37,14 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
 
          }
      }
+// ruft die Funktion Speichern aus der Datenbank auf (über das Repository (aus dem DAO) )
+
+    fun saveGruppeData (gruppe: Gruppe) {
+
+        viewModelScope.launch {
+
+            repository.insert(gruppe)
+
+        }
+    }
 }

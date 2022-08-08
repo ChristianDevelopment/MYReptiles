@@ -31,9 +31,6 @@ interface TierDataBaseDao {
 
 //    diese funktion fügt der Gruppe ein tier hinzu bei der data liste Tier
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(gruppe: Tier)
-
 //    diese funktion fügt ein Gruppe hinzu
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)

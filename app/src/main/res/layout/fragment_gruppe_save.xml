@@ -137,8 +137,9 @@
                     android:ems="10"
                     android:fontFamily="@font/pattaya"
                     android:inputType="textPersonName"
-                    android:text="Eingabe hier ..."
+                    android:hint="Eingabe hier ..."
                     android:textColor="#77B75E"
+                    android:textColorHint="#77B75E"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.106"
@@ -147,9 +148,10 @@
                     app:layout_constraintVertical_bias="0.0" />
 
                 <ImageView
-                    android:id="@+id/imageView3"
+                    android:id="@+id/IBgruppenSave"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
+                    app:tint="@color/white"
                     android:layout_marginBottom="8dp"
                     android:src="@drawable/noun_save_2490546"
                     app:layout_constraintBottom_toBottomOf="parent"

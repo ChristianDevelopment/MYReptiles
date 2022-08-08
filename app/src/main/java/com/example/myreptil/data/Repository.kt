@@ -6,6 +6,7 @@ import androidx.annotation.RequiresApi
 import androidx.lifecycle.LiveData
 import com.example.myreptil.data.datamodels.Eintrag
 import com.example.myreptil.data.datamodels.EintragEnum
+import com.example.myreptil.data.datamodels.Gruppe
 import com.example.myreptil.data.datamodels.Tier
 import com.example.myreptil.data.local.TierDataBase
 import java.time.LocalDateTime
@@ -14,7 +15,7 @@ class Repository(private val dataBase: TierDataBase) {
 
     val tierListe: LiveData<List<Tier>> = dataBase.tierDataBaseDao.getAllFromTierTable()
 
-
+// speichert ein tier in die Datenbank
     suspend fun insert(tier: Tier) {
 
         try {
@@ -25,6 +26,17 @@ class Repository(private val dataBase: TierDataBase) {
 
     }
 
+    suspend fun insert(gruppe: Gruppe) {
+
+        try {
+            dataBase.tierDataBaseDao.insert(gruppe)
+        } catch (e: Exception) {
+            Log.d("Repository", "Folgendes ist falsch gelaufen:$e")
+        }
+
+    }
+
+
     suspend fun insert(eintrag: Eintrag) {
 
         try {
@@ -34,12 +46,12 @@ class Repository(private val dataBase: TierDataBase) {
         }
 
     }
-
+// holt alle einträge von der Datenbank
     suspend fun getAllFromEintragTable(): List<Eintrag> {
 
         return dataBase.tierDataBaseDao.getAllFromEintragTable()
     }
-
+// Updatet alle einträge
     suspend fun update(tier: Tier) {
 
         try {
@@ -49,7 +61,7 @@ class Repository(private val dataBase: TierDataBase) {
         }
 
     }
-
+// löscht einträge aus der Datenbank
     suspend fun delete(tier: Tier) {
 
         try {
