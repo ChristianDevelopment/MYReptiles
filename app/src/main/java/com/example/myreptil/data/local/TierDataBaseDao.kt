@@ -3,6 +3,7 @@ package com.example.myreptil.data.local
 import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.example.myreptil.data.datamodels.Eintrag
+import com.example.myreptil.data.datamodels.Gruppe
 import com.example.myreptil.data.datamodels.Tier
 
 @Dao
@@ -27,6 +28,16 @@ interface TierDataBaseDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(eintrag: Eintrag)
+
+//    diese funktion fügt der Gruppe ein tier hinzu bei der data liste Tier
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insert(gruppe: Tier)
+
+//    diese funktion fügt ein Gruppe hinzu
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insert(gruppe: Gruppe)
 
     //diese funktion updatet die data liste Tier
 

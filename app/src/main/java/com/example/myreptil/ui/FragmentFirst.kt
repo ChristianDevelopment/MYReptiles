@@ -29,7 +29,11 @@ class FragmentFirst : Fragment(R.layout.fragment_first) {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentFirstBinding.inflate(inflater)
+        viewModel.tierList.observe(viewLifecycleOwner) {
+            if (it.isNotEmpty())
+                findNavController().navigate(FragmentFirstDirections.actionFragmentFirst2ToFragmentTiere())
 
+        }
         val add_picture = binding.firstPicture
 
         add_picture.setOnClickListener {
@@ -38,11 +42,4 @@ class FragmentFirst : Fragment(R.layout.fragment_first) {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        if (viewModel.tierList.value!!.isNotEmpty()){
-            findNavController().navigate(FragmentFirstDirections.actionFragmentFirst2ToFragmentTiere())
-        }
-    }
 }
