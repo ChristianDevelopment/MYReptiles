@@ -9,7 +9,11 @@
     <fragment
         android:id="@+id/detailCardFragment2"
         android:name="com.example.myreptil.ui.DetailCardFragment"
-        android:label="DetailCardFragment" />
+        android:label="DetailCardFragment" >
+        <action
+            android:id="@+id/action_detailCardFragment2_to_fragment_Tiere"
+            app:destination="@id/fragment_Tiere" />
+    </fragment>
     <fragment
         android:id="@+id/errorFragment"
         android:name="com.example.myreptil.ui.ErrorFragment"

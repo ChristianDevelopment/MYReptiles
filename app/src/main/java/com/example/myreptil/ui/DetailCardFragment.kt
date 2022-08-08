@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.example.myreptil.data.datamodels.Tier
 import com.example.myreptil.data.datamodels.TierartEnum
 import com.example.myreptil.R
@@ -37,6 +38,7 @@ class DetailCardFragment : Fragment() {
 
 
             //TODO input felder Auslesen
+            // TODO NOCH MACHEN für alle eigenschaften erstellen
             val name = binding.tiName.text.toString()
 
             val race = binding.tiTierart.text.toString().lowercase()
@@ -45,8 +47,6 @@ class DetailCardFragment : Fragment() {
 
 
                 // für jede tierart
-
-                //TODO fertig machen nach kurs
 
 //                INSEKTEN,
                 "insekt" -> TierartEnum.INSEKTEN
@@ -74,9 +74,9 @@ class DetailCardFragment : Fragment() {
 
 //                AMPHIBIEN,
                 "amphibie" -> TierartEnum.AMPHIBIEN
-                "amphiebien" -> TierartEnum.AMPHIBIEN
+                "amphibien" -> TierartEnum.AMPHIBIEN
 
-//                    SPINNE,
+//                SPINNE,
                 "spinne" -> TierartEnum.SPINNEN
                 "spinnen" -> TierartEnum.SPINNEN
 
@@ -104,6 +104,7 @@ class DetailCardFragment : Fragment() {
 
 
             viewModel.saveTierData(tier)
+            findNavController().navigate(DetailCardFragmentDirections.actionDetailCardFragment2ToFragmentTiere())
 
         }
 
