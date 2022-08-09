@@ -33,6 +33,7 @@ data class Tier(
 
 ) {
     //TODO überlegen der anderen typen überprüfung
+    // Filter für die suche was alles durchsucht wird
     fun wortFilter(suchBegriff: String,ignoreCase: Boolean=true): Boolean {
 
         return  Name.contains(suchBegriff,ignoreCase) ||

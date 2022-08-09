@@ -15,7 +15,7 @@ class Repository(private val dataBase: TierDataBase) {
 
     val tierListe: LiveData<List<Tier>> = dataBase.tierDataBaseDao.getAllFromTierTable()
 
-// speichert ein tier in die Datenbank
+// speichert ein Tier in die Datenbank
     suspend fun insert(tier: Tier) {
 
         try {
@@ -25,6 +25,9 @@ class Repository(private val dataBase: TierDataBase) {
         }
 
     }
+
+    // speichert ein Gruppe in die Datenbank
+
 
     suspend fun insert(gruppe: Gruppe) {
 
@@ -36,6 +39,8 @@ class Repository(private val dataBase: TierDataBase) {
 
     }
 
+// speichert ein Eintrag in die Datenbank
+
 
     suspend fun insert(eintrag: Eintrag) {
 
@@ -46,7 +51,7 @@ class Repository(private val dataBase: TierDataBase) {
         }
 
     }
-// holt alle einträge von der Datenbank
+// holt alle Einträge von der Datenbank
     suspend fun getAllFromEintragTable(): List<Eintrag> {
 
         return dataBase.tierDataBaseDao.getAllFromEintragTable()
@@ -85,6 +90,8 @@ class Repository(private val dataBase: TierDataBase) {
         dataBase.tierDataBaseDao.insert(newEntry)
     }
 
+          // filter für die timeline
+
     suspend fun getTimeline(eintragTyp: EintragEnum): List<Eintrag> {
 
         val entries = dataBase.tierDataBaseDao.getAllFromEintragTable()
@@ -99,10 +106,9 @@ class Repository(private val dataBase: TierDataBase) {
     }
 
 
-    // funktion für den suchfilter der suchseite
+    // funktion für den Suchfilter der Suchseite
 
     fun search(suchBegriff: String): List<Tier> {
-Log.d("hallo" , tierListe.value!!.size.toString())
         var filterList = tierListe.value!!.filter {
             it.wortFilter(suchBegriff)
         }

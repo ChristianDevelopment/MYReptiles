@@ -40,12 +40,17 @@ class ItemAdapterTier(private val dataset: List<Tier>, private val callSearchFra
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
 
-        val tier = dataset[position] //<- speichert das Tier position im dataset ab
+        // speichert das Tier position im dataset ab
 
-        holder.text.text = tier.Name //<- Liefert name des Tieres
+        val tier = dataset[position]
 
+        // Liefert name des Tieres
 
-        val imageRes = when (tier.Tierart) { //<- definiert Bild durch dazugehörige Tierart
+        holder.text.text = tier.Name
+
+        // definiert Bild durch dazugehörige Tierart
+
+        val imageRes = when (tier.Tierart) {
             TierartEnum.INSEKTEN -> R.drawable.insektwarnschild
             TierartEnum.SCHLANGEN -> R.drawable.schlangewarnschild
             TierartEnum.ECHSEN -> R.drawable.echsewarnschild
@@ -57,8 +62,6 @@ class ItemAdapterTier(private val dataset: List<Tier>, private val callSearchFra
             TierartEnum.NOTHING -> R.drawable.blankwarnschild
         }
 
-
-//TODO lars di nerven fertig machen
 
         holder.image.setImageResource(imageRes)  //<- Liefert Bild des Tieres
         if (callSearchFragment) {

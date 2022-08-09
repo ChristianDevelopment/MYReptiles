@@ -7,10 +7,7 @@ import androidx.room.PrimaryKey
 data class Gruppe(
     @PrimaryKey(autoGenerate = true)
     val id: Long = 0,
-//    val Image: Int,
     var Name: String,
-//    var Tierart: TierartEnum = TierartEnum.NOTHING,
-//    var CustomTierart: String = "",
     var gruppenTiereId: List<Tier>
 
 

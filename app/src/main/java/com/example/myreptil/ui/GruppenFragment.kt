@@ -40,6 +40,7 @@ class GruppenFragment : Fragment() {
 //            findNavController().navigate(GruppenFragmentDirections.actionGruppenFragmentToFragmentGruppenTiere())
 //
 //        }
+        // OnklickListener für die navigation vom GruppenFragment zum Gruppen Tiere Fragment
         binding.MTiere.setOnClickListener {
 
             findNavController().navigate(GruppenFragmentDirections.actionGruppenFragmentToFragmentTiere())

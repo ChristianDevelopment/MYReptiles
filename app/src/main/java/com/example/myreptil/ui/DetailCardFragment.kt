@@ -37,26 +37,26 @@ class DetailCardFragment : Fragment() {
         binding.ivSaveTier.setOnClickListener {
 
 
-            //TODO input felder Auslesen
-            // TODO NOCH MACHEN für alle eigenschaften erstellen
+            // für das Auslesen der input felder
+
             val name = binding.tiName.text.toString()
             var CustomTierart = binding.tiTierart.text.toString()
             var DeutscherName = binding.tiDeuName.text.toString()
             var LateinischerName= binding.tiDeuName.text.toString()
             val Alter = binding.tiAlter.text.toString().toDoubleOrNull()
-//            var Geschlecht: Double,
-//            val Gewicht: Double,
-//            val Groesse: Double,
-//            var Geboren: Double,
-//            var Erworben: Double,
-//            var Verstorben: Double,
+            var Geschlecht = binding.tiGeschlecht.text.toString().toDoubleOrNull()
+            val Gewicht = binding.tiGewicht.text.toString().toDoubleOrNull()
+            val Groesse = binding.tiGroesse.text.toString().toDoubleOrNull()
+            var Geboren =binding.tiGeboren.text.toString().toDoubleOrNull()
+            var Erworben = binding.tiErworben.text.toString().toDoubleOrNull()
+            var Verstorben = binding.tiVerstorben.text.toString().toDoubleOrNull()
             var Zuchtlinie = binding.tiZucht.text.toString()
             var Generation = binding.tiGeneration.text.toString()
-//            val LetzteHaeutung: Double,
-//            val LetzteFuetterung: Double,
-//            val FuetterungsIntervall = binding.tiFueIntervall.toString()
+            val LetzteHaeutung = binding.tiLetHaeutung.text.toString().toDoubleOrNull()
+            val LetzteFuetterung = binding.tiLetFuetterung.text.toString().toDoubleOrNull()
+            val FuetterungsIntervall = binding.tiFueIntervall.text.toString().toDoubleOrNull()
             val Tierarzt = binding.tiArzt.text.toString()
-//            val LetzterArztbesuch: Double,
+            val LetzterArztbesuch = binding.tiLetArzt.text.toString().toDoubleOrNull()
             val LetztesEreignis = binding.tiLetEreignis.text.toString()
             val Anmerkung = binding.tiAnmerkung.text.toString()
 
@@ -65,7 +65,7 @@ class DetailCardFragment : Fragment() {
             var tierartEnum = when (race) {
 
 
-                // für jede tierart
+                // mögliche schreibweise für jede tierart und Image zuweisung
 
 //                INSEKTEN,
                 "insekt" -> TierartEnum.INSEKTEN
@@ -121,7 +121,7 @@ class DetailCardFragment : Fragment() {
             )
 
 
-
+            //  beim speichern zur weiterleitung zum nächsten Fragment
             viewModel.saveTierData(tier)
             findNavController().navigate(DetailCardFragmentDirections.actionDetailCardFragment2ToFragmentTiere())
 
