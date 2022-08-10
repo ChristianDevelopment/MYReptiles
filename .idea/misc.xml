@@ -4,16 +4,19 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/add.xml" value="0.4185" />
+        <entry key="app/src/main/res/drawable/delete.xml" value="0.262" />
         <entry key="app/src/main/res/drawable/doc.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/edit.xml" value="0.262" />
         <entry key="app/src/main/res/drawable/noun_save_2490546.xml" value="0.1045" />
         <entry key="app/src/main/res/drawable/noun_snake_3063394.xml" value="0.1075" />
+        <entry key="app/src/main/res/drawable/share.xml" value="0.262" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/bal.xml" value="0.3661041259765625" />
         <entry key="app/src/main/res/layout/bla.xml" value="0.1685185185185185" />
         <entry key="app/src/main/res/layout/detail_card.xml" value="0.6137151082356771" />
         <entry key="app/src/main/res/layout/error_screen.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/fragment_arzt_besuch.xml" value="0.4898148148148148" />
-        <entry key="app/src/main/res/layout/fragment_detail_card.xml" value="0.67" />
+        <entry key="app/src/main/res/layout/fragment_detail_card.xml" value="0.4898876404494382" />
         <entry key="app/src/main/res/layout/fragment_error.xml" value="0.24791666666666667" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.4788519637462236" />
         <entry key="app/src/main/res/layout/fragment_first_.xml" value="0.3098958333333333" />
@@ -25,7 +28,7 @@
         <entry key="app/src/main/res/layout/fragment_haeutung.xml" value="0.4898148148148148" />
         <entry key="app/src/main/res/layout/fragment_huattung.xml" value="0.24791666666666667" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.21994134897360704" />
-        <entry key="app/src/main/res/layout/fragment_show_detail_card.xml" value="0.45989583333333334" />
+        <entry key="app/src/main/res/layout/fragment_show_detail_card.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_tiere.xml" value="0.3328125" />
         <entry key="app/src/main/res/layout/history_screen.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/pattern.xml" value="0.8163696289062501" />
