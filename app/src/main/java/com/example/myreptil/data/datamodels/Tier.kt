@@ -25,7 +25,7 @@ data class Tier(
     var Generation: String,
     val LetzteHaeutung: Double,
     val LetzteFuetterung: Double,
-    val FuetterungsIntervall: Int,
+    val FuetterungsIntervall: Double,
     val Tierarzt: String,
     val LetzterArztbesuch: Double,
     val LetztesEreignis: String,

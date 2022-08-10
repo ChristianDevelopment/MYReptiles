@@ -19,7 +19,7 @@
             android:id="@+id/HeadLine"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
             android:fontFamily="@font/pattaya"
             android:shadowColor="#000000"
@@ -33,40 +33,6 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/MTiere"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/pattaya"
-            android:shadowColor="#000000"
-            android:shadowDx="5"
-            android:shadowDy="5"
-            android:shadowRadius="5"
-            android:text="Tiere"
-            android:textColor="#89AC2E"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/MGruppe"
-            app:layout_constraintTop_toBottomOf="@+id/HeadLine" />
-
-        <TextView
-            android:id="@+id/MGruppe"
-            android:layout_width="92dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/pattaya"
-            android:shadowColor="#000000"
-            android:shadowDx="5"
-            android:shadowDy="5"
-            android:shadowRadius="5"
-            android:text="Gruppe"
-            android:textColor="#89AC2E"
-            android:textSize="30sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/HeadLine" />
 
 
         <com.google.android.material.card.MaterialCardView
@@ -147,7 +113,7 @@
                                 android:layout_marginTop="8dp"
                                 android:fontFamily="@font/pattaya"
                                 android:inputType="text"
-                                android:textSize="14sp"
+                                android:textSize="16sp"
                                 app:layout_constraintStart_toEndOf="@+id/tv_generation"
                                 app:layout_constraintTop_toBottomOf="@+id/ti_zucht" />
 
@@ -158,7 +124,7 @@
                                 android:layout_marginTop="8dp"
                                 android:fontFamily="@font/pattaya"
                                 android:inputType="text"
-                                android:textSize="14sp"
+                                android:textSize="16sp"
                                 app:layout_constraintStart_toEndOf="@+id/tv_let_haeutung"
                                 app:layout_constraintTop_toBottomOf="@+id/ti_generation" />
 
@@ -169,7 +135,7 @@
                                 android:layout_marginTop="8dp"
                                 android:fontFamily="@font/pattaya"
                                 android:inputType="text"
-                                android:textSize="14sp"
+                                android:textSize="16sp"
                                 app:layout_constraintStart_toEndOf="@+id/tv_gewicht"
                                 app:layout_constraintTop_toBottomOf="@+id/ti_geschlecht" />
 
@@ -457,9 +423,10 @@
                                 android:layout_width="230dp"
                                 android:layout_height="40dp"
                                 android:enabled="false"
+                                android:textColor="@color/black"
                                 android:fontFamily="@font/pattaya"
                                 android:inputType="text"
-                                android:textSize="14sp"
+                                android:textSize="16sp"
                                 app:layout_constraintStart_toEndOf="@+id/tv_name"
                                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -468,9 +435,14 @@
                                 android:layout_width="225dp"
                                 android:layout_height="40dp"
                                 android:layout_marginTop="8dp"
+
+
+                                android:enabled="false"
+                                android:textColor="@color/black"
+
                                 android:fontFamily="@font/pattaya"
                                 android:inputType="text"
-                                android:textSize="14sp"
+                                android:textSize="16sp"
                                 app:layout_constraintStart_toEndOf="@+id/tv_tierart"
                                 app:layout_constraintTop_toBottomOf="@+id/ti_name" />
 
@@ -481,7 +453,7 @@
                                 android:layout_marginTop="8dp"
                                 android:fontFamily="@font/pattaya"
                                 android:inputType="text"
-                                android:textSize="14sp"
+                                android:textSize="16sp"
                                 app:layout_constraintStart_toEndOf="@+id/tv_deu_name"
                                 app:layout_constraintTop_toBottomOf="@+id/ti_tierart" />
 
@@ -492,7 +464,7 @@
                                 android:layout_marginTop="8dp"
                                 android:fontFamily="@font/pattaya"
                                 android:inputType="text"
-                                android:textSize="14sp"
+                                android:textSize="16sp"
                                 app:layout_constraintStart_toEndOf="@+id/tv_lat_name"
                                 app:layout_constraintTop_toBottomOf="@+id/ti_deu_name" />
 
@@ -503,7 +475,7 @@
                                 android:layout_marginTop="8dp"
                                 android:fontFamily="@font/pattaya"
                                 android:inputType="text"
-                                android:textSize="14sp"
+                                android:textSize="16sp"
                                 app:layout_constraintStart_toEndOf="@+id/tv_alter"
                                 app:layout_constraintTop_toBottomOf="@+id/ti_lat_name" />
 
@@ -514,7 +486,7 @@
                                 android:layout_marginTop="8dp"
                                 android:fontFamily="@font/pattaya"
                                 android:inputType="text"
-                                android:textSize="14sp"
+                                android:textSize="16sp"
                                 app:layout_constraintStart_toEndOf="@+id/tv_geschlecht"
                                 app:layout_constraintTop_toBottomOf="@+id/ti_alter" />
 
@@ -525,7 +497,7 @@
                                 android:layout_marginTop="8dp"
                                 android:fontFamily="@font/pattaya"
                                 android:inputType="text"
-                                android:textSize="14sp"
+                                android:textSize="16sp"
                                 app:layout_constraintStart_toEndOf="@+id/tv_groeße"
                                 app:layout_constraintTop_toBottomOf="@+id/ti_gewicht" />
 
@@ -536,7 +508,7 @@
                                 android:layout_marginTop="8dp"
                                 android:fontFamily="@font/pattaya"
                                 android:inputType="text"
-                                android:textSize="14sp"
+                                android:textSize="16sp"
                                 app:layout_constraintStart_toEndOf="@+id/tv_geboren"
                                 app:layout_constraintTop_toBottomOf="@+id/ti_groesse" />
 
@@ -547,7 +519,7 @@
                                 android:layout_marginTop="8dp"
                                 android:fontFamily="@font/pattaya"
                                 android:inputType="text"
-                                android:textSize="14sp"
+                                android:textSize="16sp"
                                 app:layout_constraintStart_toEndOf="@+id/tv_erworben"
                                 app:layout_constraintTop_toBottomOf="@+id/ti_geboren" />
 
@@ -558,7 +530,7 @@
                                 android:layout_marginTop="8dp"
                                 android:fontFamily="@font/pattaya"
                                 android:inputType="text"
-                                android:textSize="14sp"
+                                android:textSize="16sp"
                                 app:layout_constraintStart_toEndOf="@+id/tv_verstorben"
                                 app:layout_constraintTop_toBottomOf="@+id/ti_erworben" />
 
@@ -569,7 +541,7 @@
                                 android:layout_marginTop="8dp"
                                 android:fontFamily="@font/pattaya"
                                 android:inputType="text"
-                                android:textSize="14sp"
+                                android:textSize="16sp"
                                 app:layout_constraintStart_toEndOf="@+id/tv_zucht"
                                 app:layout_constraintTop_toBottomOf="@+id/ti_verstorben" />
 
@@ -580,7 +552,7 @@
                                 android:layout_marginTop="8dp"
                                 android:fontFamily="@font/pattaya"
                                 android:inputType="text"
-                                android:textSize="14sp"
+                                android:textSize="16sp"
                                 app:layout_constraintStart_toEndOf="@+id/tv_let_fuetterung"
                                 app:layout_constraintTop_toBottomOf="@+id/ti_let_haeutung" />
 
@@ -591,7 +563,7 @@
                                 android:layout_marginTop="8dp"
                                 android:fontFamily="@font/pattaya"
                                 android:inputType="text"
-                                android:textSize="14sp"
+                                android:textSize="16sp"
                                 app:layout_constraintStart_toEndOf="@+id/tv_fue_intervall"
                                 app:layout_constraintTop_toBottomOf="@+id/ti_let_fuetterung" />
 
@@ -602,7 +574,7 @@
                                 android:layout_marginTop="8dp"
                                 android:fontFamily="@font/pattaya"
                                 android:inputType="text"
-                                android:textSize="14sp"
+                                android:textSize="16sp"
                                 app:layout_constraintStart_toEndOf="@+id/tv_arzt"
                                 app:layout_constraintTop_toBottomOf="@+id/ti_fue_intervall" />
 
@@ -613,7 +585,7 @@
                                 android:layout_marginTop="8dp"
                                 android:fontFamily="@font/pattaya"
                                 android:inputType="text"
-                                android:textSize="14sp"
+                                android:textSize="16sp"
                                 app:layout_constraintStart_toEndOf="@+id/tv_let_arzt"
                                 app:layout_constraintTop_toBottomOf="@+id/ti_arzt" />
 
@@ -624,7 +596,7 @@
                                 android:layout_marginTop="8dp"
                                 android:fontFamily="@font/pattaya"
                                 android:inputType="text"
-                                android:textSize="14sp"
+                                android:textSize="16sp"
                                 app:layout_constraintStart_toEndOf="@+id/tv_let_ereignis"
                                 app:layout_constraintTop_toBottomOf="@+id/ti_let_arzt" />
 
@@ -635,7 +607,7 @@
                                 android:layout_marginTop="8dp"
                                 android:fontFamily="@font/pattaya"
                                 android:inputType="text"
-                                android:textSize="14sp"
+                                android:textSize="16sp"
                                 app:layout_constraintStart_toEndOf="@+id/tv_anmerkung"
                                 app:layout_constraintTop_toBottomOf="@+id/ti_let_ereignis" />
 

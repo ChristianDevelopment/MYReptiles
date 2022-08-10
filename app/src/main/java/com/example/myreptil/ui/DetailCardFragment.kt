@@ -39,15 +39,15 @@ class DetailCardFragment : Fragment() {
 
             // für das Auslesen der input felder
 
-            val name = binding.tiName.text.toString()
+            val Name = binding.tiName.text.toString()
             var CustomTierart = binding.tiTierart.text.toString()
             var DeutscherName = binding.tiDeuName.text.toString()
-            var LateinischerName= binding.tiDeuName.text.toString()
+            var LateinischerName = binding.tiLatName.text.toString()
             val Alter = binding.tiAlter.text.toString().toDoubleOrNull()
             var Geschlecht = binding.tiGeschlecht.text.toString().toDoubleOrNull()
             val Gewicht = binding.tiGewicht.text.toString().toDoubleOrNull()
             val Groesse = binding.tiGroesse.text.toString().toDoubleOrNull()
-            var Geboren =binding.tiGeboren.text.toString().toDoubleOrNull()
+            var Geboren = binding.tiGeboren.text.toString().toDoubleOrNull()
             var Erworben = binding.tiErworben.text.toString().toDoubleOrNull()
             var Verstorben = binding.tiVerstorben.text.toString().toDoubleOrNull()
             var Zuchtlinie = binding.tiZucht.text.toString()
@@ -105,10 +105,29 @@ class DetailCardFragment : Fragment() {
             }
 
             val tier = Tier(
-                0, 0, name, tierartEnum, "", "", "",
-                0.0, 0.0, 0.0, 0.0,
-                0.0, 0.0, 0.0, "", "", 0.0,
-                0.0, 0, "", 0.0, "", ""
+                Image = 0,
+                Name = Name,
+                CustomTierart = CustomTierart,
+                DeutscherName = DeutscherName,
+                LateinischerName = LateinischerName,
+                Alter = Alter?:0.0,
+                Geschlecht = Geschlecht?:0.0,
+                Tierart = tierartEnum,
+                Gewicht = Gewicht?:0.0,
+                Groesse = Groesse?:0.0,
+                Geboren = Geboren?:0.0,
+                Erworben = Erworben?:0.0,
+                Verstorben = Verstorben?:0.0,
+                Zuchtlinie = Zuchtlinie,
+                Generation = Generation,
+                LetzteHaeutung = LetzteHaeutung?:0.0,
+                LetzteFuetterung = LetzteFuetterung?:0.0,
+                FuetterungsIntervall = FuetterungsIntervall?:0.0,
+                Tierarzt = Tierarzt,
+                LetzterArztbesuch = LetzterArztbesuch?:0.0,
+                LetztesEreignis = LetztesEreignis,
+                Anmerkung = Anmerkung
+
             )
 
 

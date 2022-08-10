@@ -38,7 +38,25 @@ class ShowDetailCardFragment : Fragment() {
 
         if (tier != null) {
             binding.tiName.setText(tier.Name)
-                binding.tiTierart.setText(tier.Tierart.toString())
+            binding.tiTierart.setText(tier.Tierart.toString())
+            binding.tiDeuName.setText(tier.DeutscherName)
+            binding.tiLatName.setText(tier.LateinischerName)
+            binding.tiAlter.setText(tier.Alter.toString())
+            binding.tiGeschlecht.setText(tier.Geschlecht.toString())
+            binding.tiGewicht.setText(tier.Gewicht.toString())
+            binding.tiGroesse.setText(tier.Groesse.toString())
+            binding.tiGeboren.setText(tier.Geboren.toString())
+            binding.tiErworben.setText(tier.Erworben.toString())
+            binding.tiVerstorben.setText(tier.Verstorben.toString())
+            binding.tiZucht.setText(tier.Zuchtlinie)
+            binding.tiGeneration.setText(tier.Generation)
+            binding.tiLetHaeutung.setText(tier.LetzteHaeutung.toString())
+            binding.tiLetFuetterung.setText(tier.LetzteFuetterung.toString())
+            binding.tiFueIntervall.setText(tier.FuetterungsIntervall.toString())
+            binding.tiArzt.setText(tier.Tierarzt)
+            binding.tiLetArzt.setText(tier.LetzterArztbesuch.toString())
+            binding.tiLetEreignis.setText(tier.LetztesEreignis)
+            binding.tiAnmerkung.setText(tier.Anmerkung)
         }
 
         // definiert Bild durch dazugehörige Tierart

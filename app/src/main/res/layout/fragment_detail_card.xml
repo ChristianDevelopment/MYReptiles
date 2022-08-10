@@ -19,7 +19,7 @@
             android:id="@+id/HeadLine"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
             android:fontFamily="@font/pattaya"
             android:shadowColor="#000000"
@@ -33,40 +33,6 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/MTiere"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/pattaya"
-            android:shadowColor="#000000"
-            android:shadowDx="5"
-            android:shadowDy="5"
-            android:shadowRadius="5"
-            android:text="Tiere"
-            android:textColor="#89AC2E"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/MGruppe"
-            app:layout_constraintTop_toBottomOf="@+id/HeadLine" />
-
-        <TextView
-            android:id="@+id/MGruppe"
-            android:layout_width="92dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/pattaya"
-            android:shadowColor="#000000"
-            android:shadowDx="5"
-            android:shadowDy="5"
-            android:shadowRadius="5"
-            android:text="Gruppe"
-            android:textColor="#89AC2E"
-            android:textSize="30sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/HeadLine" />
 
 
         <com.google.android.material.card.MaterialCardView
