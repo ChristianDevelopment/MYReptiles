@@ -456,6 +456,7 @@
                                 android:id="@+id/ti_name"
                                 android:layout_width="230dp"
                                 android:layout_height="40dp"
+                                android:enabled="false"
                                 android:fontFamily="@font/pattaya"
                                 android:inputType="text"
                                 android:textSize="14sp"

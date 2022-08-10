@@ -83,6 +83,8 @@ class ItemAdapterTier(private val dataset: List<Tier>, private val callSearchFra
                 holder.itemView.findNavController()
                     .navigate(
                         Fragment_TiereDirections.actionFragmentTiereToShowDetailCardFragment(tier.id)
+
+
                     )
             }
         }

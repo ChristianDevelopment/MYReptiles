@@ -35,7 +35,15 @@ class ShowDetailCardFragment : Fragment() {
 
         var tier = viewModel.tierList.value!!.find { it.id == tierId }
 
-        val imageRes = when (tier?.Tierart) { //<- definiert Bild durch dazugehörige Tierart
+
+        if (tier != null) {
+            binding.tiName.setText(tier.Name)
+                binding.tiTierart.setText(tier.Tierart.toString())
+        }
+
+        // definiert Bild durch dazugehörige Tierart
+
+        val imageRes = when (tier?.Tierart) {
             TierartEnum.INSEKTEN -> R.drawable.insektwarnschild
             TierartEnum.SCHLANGEN -> R.drawable.schlangewarnschild
             TierartEnum.ECHSEN -> R.drawable.echsewarnschild

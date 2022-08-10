@@ -104,15 +104,6 @@ class DetailCardFragment : Fragment() {
 
             }
 
-
-            // bisher nur beispielwerte (frei eintragbar später)
-
-            //            var newEntry = Eintrag(
-            //                datum = LocalDateTime.now().toString(),
-            //                eintrag = eintrag,
-            //                eintragTyp = eintragTyp
-            //            )
-
             val tier = Tier(
                 0, 0, name, tierartEnum, "", "", "",
                 0.0, 0.0, 0.0, 0.0,
