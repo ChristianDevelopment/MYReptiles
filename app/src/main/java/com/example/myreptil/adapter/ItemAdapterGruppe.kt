@@ -13,8 +13,9 @@ import com.example.myreptil.data.datamodels.Gruppe
 // der Adapter braucht den Context um auf String Resourcen zuzugreifen
 // und die Liste an Jokes um sie für die RecyclerView vorzubereiten
 class ItemAdapterGruppe(
-    private val dataset: List<Gruppe>,
-    private val navigation: (Long)->Unit
+    private val dataset: MutableList<Gruppe>,
+    private val navigation: (Long) -> Unit,
+    private val deleteGruppe: (Gruppe) -> Unit
 ) : RecyclerView.Adapter<ItemAdapterGruppe.ItemViewHolder>() {
 
     // IDEE VON VIEWHOLDERN
@@ -52,6 +53,9 @@ class ItemAdapterGruppe(
             navigation(itemGruppe.id)
         }
 
+        if(itemGruppe.tiereInGruppe.isEmpty()){
+        deleteGruppe(itemGruppe)
+        }
     }
 
     // damit der LayoutManager weiß wie lang die Liste ist

@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.example.myreptil.R
 import com.example.myreptil.data.datamodels.TierartEnum
 import com.example.myreptil.databinding.FragmentShowDetailCardBinding
@@ -75,6 +76,35 @@ class ShowDetailCardFragment : Fragment() {
         }
 
         binding.imageButton.setImageResource(imageRes)
+
+        binding.ivDelete.setOnClickListener {
+            viewModel.gruppenList.observe(viewLifecycleOwner){
+
+                // entfernt ein gruppentier aus der gruppe wenn es ein tier ist das man löschen möchte
+
+                for (gruppe in it) {
+                    for (gruppenTier in gruppe.tiereInGruppe){
+                        if (tier == gruppenTier){
+                            gruppe.tiereInGruppe.remove(gruppenTier)
+                        }
+                    }
+                    viewModel.update(gruppe)
+                }
+            }
+
+            if (tier != null) {
+                viewModel.delete(tier)
+            }
+
+            findNavController().navigate(ShowDetailCardFragmentDirections.actionShowDetailCardFragmentToFragmentTiere())
+
+        }
+
+        binding.ivEdit.setOnClickListener {
+        }
+
+        binding.ivShare.setOnClickListener {}
+
 
     }
 

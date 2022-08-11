@@ -81,7 +81,18 @@ class Repository(private val dataBase: TierDataBase) {
 
     }
 
-// löscht einträge aus der Datenbank
+    // löscht gruppe aus der Datenbank
+    suspend fun delete(gruppe: Gruppe) {
+
+        try {
+            dataBase.tierDataBaseDao.delete(gruppe.id)
+        } catch (e: Exception) {
+            Log.d("Repository", "Folgendes ist falsch gelaufen:$e")
+        }
+
+    }
+
+// löscht tier aus der Datenbank
     suspend fun delete(tier: Tier) {
 
         try {

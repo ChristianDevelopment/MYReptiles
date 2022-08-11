@@ -10,6 +10,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.myreptil.R
 import com.example.myreptil.adapter.ItemAdapterGruppe
+import com.example.myreptil.data.datamodels.Gruppe
 import com.example.myreptil.databinding.FragmentGruppenBinding
 
 
@@ -37,9 +38,11 @@ class GruppenFragment : Fragment() {
 
         var navigation:(Long)->Unit ={ id->findNavController().navigate(GruppenFragmentDirections.actionGruppenFragmentToFragmentGruppenTiere(id))}
 
+        var deleteGruppe :(Gruppe)->Unit = {gruppe -> viewModel.delete(gruppe) }
+
         viewModel.gruppenList.observe(viewLifecycleOwner) {
 
-            binding.rvRvLayout.adapter = ItemAdapterGruppe(it, navigation)
+            binding.rvRvLayout.adapter = ItemAdapterGruppe(it, navigation,deleteGruppe)
 
         }
 
@@ -50,6 +53,7 @@ class GruppenFragment : Fragment() {
 
             findNavController().navigate(GruppenFragmentDirections.actionGruppenFragmentToFragmentTiere())
         }
+
 
     }
 }

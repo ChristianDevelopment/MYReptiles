@@ -50,24 +50,22 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
+    fun update(gruppe: Gruppe){
+        viewModelScope.launch {
+            repository.update(gruppe)
+        }
+
+    }
+
+    fun delete(gruppe: Gruppe) {
+        viewModelScope.launch {
+            repository.delete(gruppe)
+        }
+    }
+
     fun delete(tier: Tier) {
         viewModelScope.launch {
             repository.delete(tier)
-        }
-
-        // entfernt ein gruppentier aus der gruppe wenn es ein tier ist das man löschen möchte ***********
-
-        for (gruppe in gruppenList.value!!) {
-            for (gruppenTier in gruppe.tiereInGruppe){
-                if (tier == gruppenTier){
-                    gruppe.tiereInGruppe.remove(gruppenTier)
-                }
-            }
-
-            viewModelScope.launch {
-                repository.update(gruppe)
-            }
-
         }
     }
 }

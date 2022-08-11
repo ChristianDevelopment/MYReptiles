@@ -7,6 +7,7 @@
         <entry key="app/src/main/res/drawable/delete.xml" value="0.262" />
         <entry key="app/src/main/res/drawable/doc.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/edit.xml" value="0.262" />
+        <entry key="app/src/main/res/drawable/meal.xml" value="0.263" />
         <entry key="app/src/main/res/drawable/noun_qr_3173181_2.xml" value="0.263" />
         <entry key="app/src/main/res/drawable/noun_save_2490546.xml" value="0.1045" />
         <entry key="app/src/main/res/drawable/noun_snake_3063394.xml" value="0.1075" />
@@ -18,8 +19,8 @@
         <entry key="app/src/main/res/layout/error_screen.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/fragment_arzt_besuch.xml" value="0.4898148148148148" />
         <entry key="app/src/main/res/layout/fragment_detail_card.xml" value="0.20095693779904306" />
-        <entry key="app/src/main/res/layout/fragment_error.xml" value="0.24791666666666667" />
-        <entry key="app/src/main/res/layout/fragment_first.xml" value="0.45454545454545453" />
+        <entry key="app/src/main/res/layout/fragment_error.xml" value="0.34706370035807294" />
+        <entry key="app/src/main/res/layout/fragment_first.xml" value="0.4788519637462236" />
         <entry key="app/src/main/res/layout/fragment_first_.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/fragment_fuetterung.xml" value="0.4898148148148148" />
         <entry key="app/src/main/res/layout/fragment_gruppe_save.xml" value="0.33" />

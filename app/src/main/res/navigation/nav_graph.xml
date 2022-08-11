@@ -106,5 +106,8 @@
         <argument
             android:name="tierId"
             app:argType="long" />
+        <action
+            android:id="@+id/action_showDetailCardFragment_to_fragment_Tiere"
+            app:destination="@id/fragment_Tiere" />
     </fragment>
 </navigation>
