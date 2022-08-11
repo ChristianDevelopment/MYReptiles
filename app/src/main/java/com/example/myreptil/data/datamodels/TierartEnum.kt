@@ -10,5 +10,4 @@ enum class TierartEnum {
     AMPHIBIEN,
     SPINNEN,
     NOTHING
-
 }

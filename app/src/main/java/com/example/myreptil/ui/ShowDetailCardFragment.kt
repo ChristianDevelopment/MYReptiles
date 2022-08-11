@@ -1,17 +1,15 @@
 package com.example.myreptil.ui
 
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.myreptil.R
 import com.example.myreptil.data.datamodels.TierartEnum
 import com.example.myreptil.databinding.FragmentShowDetailCardBinding
-
 
 class ShowDetailCardFragment : Fragment() {
 
@@ -20,7 +18,8 @@ class ShowDetailCardFragment : Fragment() {
     private lateinit var binding: FragmentShowDetailCardBinding
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
@@ -35,7 +34,6 @@ class ShowDetailCardFragment : Fragment() {
         var tierId = requireArguments().getLong("tierId")
 
         var tier = viewModel.tierList.value!!.find { it.id == tierId }
-
 
         if (tier != null) {
             binding.tiName.setText(tier.Name)
@@ -78,13 +76,12 @@ class ShowDetailCardFragment : Fragment() {
         binding.imageButton.setImageResource(imageRes)
 
         binding.ivDelete.setOnClickListener {
-            viewModel.gruppenList.observe(viewLifecycleOwner){
-
+            viewModel.gruppenList.observe(viewLifecycleOwner) {
                 // entfernt ein gruppentier aus der gruppe wenn es ein tier ist das man löschen möchte
 
                 for (gruppe in it) {
-                    for (gruppenTier in gruppe.tiereInGruppe){
-                        if (tier == gruppenTier){
+                    for (gruppenTier in gruppe.tiereInGruppe) {
+                        if (tier == gruppenTier) {
                             gruppe.tiereInGruppe.remove(gruppenTier)
                         }
                     }
@@ -97,15 +94,11 @@ class ShowDetailCardFragment : Fragment() {
             }
 
             findNavController().navigate(ShowDetailCardFragmentDirections.actionShowDetailCardFragmentToFragmentTiere())
-
         }
 
         binding.ivEdit.setOnClickListener {
         }
 
         binding.ivShare.setOnClickListener {}
-
-
     }
-
 }

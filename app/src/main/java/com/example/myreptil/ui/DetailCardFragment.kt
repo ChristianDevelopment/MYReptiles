@@ -1,18 +1,17 @@
 package com.example.myreptil.ui
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import com.example.myreptil.R
 import com.example.myreptil.data.datamodels.Tier
 import com.example.myreptil.data.datamodels.TierartEnum
-import com.example.myreptil.R
 import com.example.myreptil.databinding.FragmentDetailCardBinding
-
 
 class DetailCardFragment : Fragment() {
 
@@ -25,7 +24,6 @@ class DetailCardFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_detail_card, container, false)
 
         return binding.root
@@ -35,8 +33,6 @@ class DetailCardFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.ivSaveTier.setOnClickListener {
-
-
             // für das Auslesen der input felder
 
             val Name = binding.tiName.text.toString()
@@ -63,8 +59,6 @@ class DetailCardFragment : Fragment() {
             val race = binding.tiTierart.text.toString().lowercase()
 
             var tierartEnum = when (race) {
-
-
                 // mögliche schreibweise für jede tierart und Image zuweisung
 
 //                INSEKTEN,
@@ -99,9 +93,7 @@ class DetailCardFragment : Fragment() {
                 "spinne" -> TierartEnum.SPINNEN
                 "spinnen" -> TierartEnum.SPINNEN
 
-
                 else -> TierartEnum.NOTHING
-
             }
 
             val tier = Tier(
@@ -110,33 +102,29 @@ class DetailCardFragment : Fragment() {
                 CustomTierart = CustomTierart,
                 DeutscherName = DeutscherName,
                 LateinischerName = LateinischerName,
-                Alter = Alter?:0.0,
-                Geschlecht = Geschlecht?:0.0,
+                Alter = Alter ?: 0.0,
+                Geschlecht = Geschlecht ?: 0.0,
                 Tierart = tierartEnum,
-                Gewicht = Gewicht?:0.0,
-                Groesse = Groesse?:0.0,
-                Geboren = Geboren?:0.0,
-                Erworben = Erworben?:0.0,
-                Verstorben = Verstorben?:0.0,
+                Gewicht = Gewicht ?: 0.0,
+                Groesse = Groesse ?: 0.0,
+                Geboren = Geboren ?: 0.0,
+                Erworben = Erworben ?: 0.0,
+                Verstorben = Verstorben ?: 0.0,
                 Zuchtlinie = Zuchtlinie,
                 Generation = Generation,
-                LetzteHaeutung = LetzteHaeutung?:0.0,
-                LetzteFuetterung = LetzteFuetterung?:0.0,
-                FuetterungsIntervall = FuetterungsIntervall?:0.0,
+                LetzteHaeutung = LetzteHaeutung ?: 0.0,
+                LetzteFuetterung = LetzteFuetterung ?: 0.0,
+                FuetterungsIntervall = FuetterungsIntervall ?: 0.0,
                 Tierarzt = Tierarzt,
-                LetzterArztbesuch = LetzterArztbesuch?:0.0,
+                LetzterArztbesuch = LetzterArztbesuch ?: 0.0,
                 LetztesEreignis = LetztesEreignis,
                 Anmerkung = Anmerkung
 
             )
 
-
             //  beim speichern zur weiterleitung zum nächsten Fragment
             viewModel.saveTierData(tier)
             findNavController().navigate(DetailCardFragmentDirections.actionDetailCardFragment2ToFragmentTiere())
-
         }
-
     }
-
 }

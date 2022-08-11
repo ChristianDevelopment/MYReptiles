@@ -3,7 +3,6 @@ package com.example.myreptil.data.datamodels
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-
 @Entity
 data class Tier(
     @PrimaryKey(autoGenerate = true)
@@ -32,20 +31,19 @@ data class Tier(
     val Anmerkung: String
 
 ) {
-    //TODO überlegen der anderen typen überprüfung
+    // TODO überlegen der anderen typen überprüfung
     // Filter für die suche was alles durchsucht wird
-    fun wortFilter(suchBegriff: String,ignoreCase: Boolean=true): Boolean {
-
-        return  Name.contains(suchBegriff,ignoreCase) ||
-                Tierart.name.contains(suchBegriff,ignoreCase) ||
-                CustomTierart.contains(suchBegriff,ignoreCase) ||
-                DeutscherName.contains(suchBegriff,ignoreCase) ||
-                LateinischerName.contains(suchBegriff,ignoreCase) ||
-                Geschlecht.toString().contains(suchBegriff,ignoreCase) ||
-                Zuchtlinie.contains(suchBegriff,ignoreCase) ||
-                Generation.contains(suchBegriff,ignoreCase) ||
-                Tierarzt.contains(suchBegriff,ignoreCase) ||
-                LetztesEreignis.contains(suchBegriff,ignoreCase) ||
-                Anmerkung.contains(suchBegriff,ignoreCase)
+    fun wortFilter(suchBegriff: String, ignoreCase: Boolean = true): Boolean {
+        return Name.contains(suchBegriff, ignoreCase) ||
+            Tierart.name.contains(suchBegriff, ignoreCase) ||
+            CustomTierart.contains(suchBegriff, ignoreCase) ||
+            DeutscherName.contains(suchBegriff, ignoreCase) ||
+            LateinischerName.contains(suchBegriff, ignoreCase) ||
+            Geschlecht.toString().contains(suchBegriff, ignoreCase) ||
+            Zuchtlinie.contains(suchBegriff, ignoreCase) ||
+            Generation.contains(suchBegriff, ignoreCase) ||
+            Tierarzt.contains(suchBegriff, ignoreCase) ||
+            LetztesEreignis.contains(suchBegriff, ignoreCase) ||
+            Anmerkung.contains(suchBegriff, ignoreCase)
     }
 }

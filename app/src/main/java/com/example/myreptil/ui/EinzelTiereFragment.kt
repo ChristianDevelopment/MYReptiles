@@ -26,7 +26,6 @@ class Fragment_Tiere : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         // Inflate the layout for this fragment
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_tiere, container, false)
@@ -36,18 +35,14 @@ class Fragment_Tiere : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.tierList.observe(viewLifecycleOwner){
+        viewModel.tierList.observe(viewLifecycleOwner) {
+            val navigate: (Long) -> Unit = { id -> findNavController().navigate(Fragment_TiereDirections.actionFragmentTiereToShowDetailCardFragment(id)) }
 
-            val navigate: (Long) -> Unit = {id -> findNavController().navigate(Fragment_TiereDirections.actionFragmentTiereToShowDetailCardFragment(id))}
-
-            binding.rvRvLayout.adapter = ItemAdapterTier(it,navigate)
-
+            binding.rvRvLayout.adapter = ItemAdapterTier(it, navigate)
         }
 
         binding.MGruppe.setOnClickListener {
-
             findNavController().navigate(Fragment_TiereDirections.actionFragmentTiereToGruppenFragment())
         }
     }
-
 }

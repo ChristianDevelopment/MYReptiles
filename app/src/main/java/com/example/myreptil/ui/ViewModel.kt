@@ -17,44 +17,36 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
 
     // variable speichert eine Repository Instance
 
-    private val repository = Repository(dataBase)   //<-object
+    private val repository = Repository(dataBase) // <-object
 
     // speichert in der variable die tierliste vom Repository ab
 
-    val tierList = repository.tierListe  //<- tierListe vom Repository
+    val tierList = repository.tierListe // <- tierListe vom Repository
 
-    val gruppenList = repository.gruppenListe  //<- gruppenListe vom Repository
+    val gruppenList = repository.gruppenListe // <- gruppenListe vom Repository
 
     fun search(suchBegriff: String): List<Tier> {
-
         return repository.search(suchBegriff)
     }
 
     // ruft die Funktion Speichern aus der Datenbank auf (über das Repository (aus dem DAO) )
     fun saveTierData(tier: Tier) {
-
         viewModelScope.launch {
-
             repository.insert(tier)
-
         }
     }
 // ruft die Funktion Speichern aus der Datenbank auf (über das Repository (aus dem DAO) )
 
     fun saveGruppeData(gruppe: Gruppe) {
-
         viewModelScope.launch {
-
             repository.insert(gruppe)
-
         }
     }
 
-    fun update(gruppe: Gruppe){
+    fun update(gruppe: Gruppe) {
         viewModelScope.launch {
             repository.update(gruppe)
         }
-
     }
 
     fun delete(gruppe: Gruppe) {
@@ -69,4 +61,3 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 }
-

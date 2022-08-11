@@ -6,21 +6,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import com.example.myreptil.R
 import androidx.navigation.fragment.findNavController
+import com.example.myreptil.R
 import com.example.myreptil.databinding.FragmentFirstBinding
 
-
 class FragmentFirst : Fragment(R.layout.fragment_first) {
-
 
     private lateinit var binding: FragmentFirstBinding
     private val viewModel: ViewModel by activityViewModels()
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(
@@ -30,9 +26,9 @@ class FragmentFirst : Fragment(R.layout.fragment_first) {
     ): View? {
         binding = FragmentFirstBinding.inflate(inflater)
         viewModel.tierList.observe(viewLifecycleOwner) {
-            if (it.isNotEmpty())
+            if (it.isNotEmpty()) {
                 findNavController().navigate(FragmentFirstDirections.actionFragmentFirst2ToFragmentTiere())
-
+            }
         }
         val add_picture = binding.firstPicture
 
@@ -41,5 +37,4 @@ class FragmentFirst : Fragment(R.layout.fragment_first) {
         }
         return binding.root
     }
-
 }

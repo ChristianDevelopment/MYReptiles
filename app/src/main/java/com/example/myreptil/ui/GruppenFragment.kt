@@ -13,19 +13,16 @@ import com.example.myreptil.adapter.ItemAdapterGruppe
 import com.example.myreptil.data.datamodels.Gruppe
 import com.example.myreptil.databinding.FragmentGruppenBinding
 
-
 class GruppenFragment : Fragment() {
 
     private lateinit var binding: FragmentGruppenBinding
     private val viewModel: ViewModel by activityViewModels()
-
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_gruppen, container, false)
 
         // Inflate the layout for this fragment
@@ -36,27 +33,18 @@ class GruppenFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        var navigation:(Long)->Unit ={ id->findNavController().navigate(GruppenFragmentDirections.actionGruppenFragmentToFragmentGruppenTiere(id))}
+        var navigation: (Long) -> Unit = { id -> findNavController().navigate(GruppenFragmentDirections.actionGruppenFragmentToFragmentGruppenTiere(id)) }
 
-        var deleteGruppe :(Gruppe)->Unit = {gruppe -> viewModel.delete(gruppe) }
+        var deleteGruppe: (Gruppe) -> Unit = { gruppe -> viewModel.delete(gruppe) }
 
         viewModel.gruppenList.observe(viewLifecycleOwner) {
-
-            binding.rvRvLayout.adapter = ItemAdapterGruppe(it, navigation,deleteGruppe)
-
+            binding.rvRvLayout.adapter = ItemAdapterGruppe(it, navigation, deleteGruppe)
         }
-
 
         // OnklickListener für die navigation vom GruppenFragment zum Gruppen Tiere Fragment
 
         binding.MTiere.setOnClickListener {
-
             findNavController().navigate(GruppenFragmentDirections.actionGruppenFragmentToFragmentTiere())
         }
-
-
     }
 }
-
-
-

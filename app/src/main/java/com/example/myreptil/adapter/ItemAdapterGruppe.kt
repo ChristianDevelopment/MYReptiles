@@ -1,5 +1,6 @@
 package com.example.myreptil.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,14 +25,13 @@ class ItemAdapterGruppe(
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         val textView: TextView = view.findViewById(R.id.tv_patternGruppe)
         val imageView: ImageView = view.findViewById(R.id.iv_patternGruppe)
-        val patternButton : ConstraintLayout = view.findViewById(R.id.patternGruppe_button)
+        val patternButton: ConstraintLayout = view.findViewById(R.id.patternGruppe_button)
     }
 
     // ERSTELLEN VON VIEWHOLDERN
     // hier werden neue ViewHolder erstellt
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
-
         // das itemLayout wird gebaut
 
         val adapterLayout = LayoutInflater.from(parent.context)
@@ -49,12 +49,14 @@ class ItemAdapterGruppe(
         val itemGruppe = dataset[position]
         holder.textView.text = itemGruppe.Name
 
-        holder.patternButton.setOnClickListener{
+        holder.patternButton.setOnClickListener {
             navigation(itemGruppe.id)
         }
 
-        if(itemGruppe.tiereInGruppe.isEmpty()){
-        deleteGruppe(itemGruppe)
+        Log.i("TESTEST", "tiere in Gruppe: ${itemGruppe.tiereInGruppe}")
+        if (itemGruppe.tiereInGruppe.size == 0) {
+            Log.i("TESTEST", "delete")
+            deleteGruppe(itemGruppe)
         }
     }
 

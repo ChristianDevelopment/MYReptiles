@@ -5,39 +5,33 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myreptil.R
 import com.example.myreptil.data.datamodels.Tier
 import com.example.myreptil.data.datamodels.TierartEnum
-import com.example.myreptil.R
-import com.example.myreptil.ui.Fragment_TiereDirections
-import com.example.myreptil.ui.SearchFragmentDirections
 
-class ItemAdapterTier(private val dataset: List<Tier>,
-                      private val navigate: (Long) -> Unit) :
+class ItemAdapterTier(
+    private val dataset: List<Tier>,
+    private val navigate: (Long) -> Unit
+) :
     RecyclerView.Adapter<ItemAdapterTier.ItemViewHolder>() {
 
     inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         val text: TextView = itemView.findViewById(R.id.tv_pattern)
         val image: ImageView = itemView.findViewById(R.id.iv_pattern)
-
     }
-
 
     // erstellt das item Layout über itemViewHolder
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
-
         val itemLayout =
             LayoutInflater.from(parent.context).inflate(R.layout.pattern, parent, false)
 
         return ItemViewHolder(itemLayout)
-
     }
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-
         // speichert das Tier position im dataset ab
 
         val tier = dataset[position]
@@ -60,21 +54,16 @@ class ItemAdapterTier(private val dataset: List<Tier>,
             TierartEnum.NOTHING -> R.drawable.blankwarnschild
         }
 
-
-        holder.image.setImageResource(imageRes)  //<- Liefert Bild des Tieres
-
+        holder.image.setImageResource(imageRes) // <- Liefert Bild des Tieres
 
         holder.image.setOnClickListener {
             navigate(tier.id)
         }
-
     }
 
-    //liefert die anzahl der Tier (Liste)
+    // liefert die anzahl der Tier (Liste)
 
     override fun getItemCount(): Int {
         return dataset.size
     }
-
-
 }

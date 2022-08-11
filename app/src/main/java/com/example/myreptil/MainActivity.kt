@@ -10,12 +10,12 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
-import com.example.myreptil.ui.ViewModel
 import com.example.myreptil.databinding.ActivityMainBinding
+import com.example.myreptil.ui.ViewModel
 
 class MainActivity : AppCompatActivity() {
 
-    private val viewModel : ViewModel by viewModels()
+    private val viewModel: ViewModel by viewModels()
 
     private lateinit var binding: ActivityMainBinding
 

@@ -7,8 +7,7 @@ import com.google.gson.reflect.TypeToken
 
 class Converters {
 
-
-    //erstellt ein Gson und convertiert die Liste in einen String (ist da das man in Datenbank abspeichern kann)
+    // erstellt ein Gson und convertiert die Liste in einen String (ist da das man in Datenbank abspeichern kann)
 
     @TypeConverter
     fun listOfItemsToString(items: MutableList<Tier>): String? {
@@ -16,15 +15,11 @@ class Converters {
         return gson.toJson(items)
     }
 
-
     // wandelt den String wieder um in die Liste um
     @TypeConverter
     fun fromString(value: String?): MutableList<Tier> {
-
         val listType = object : TypeToken<ArrayList<Tier?>?>() {}.type
 
-        return Gson().fromJson(value , listType)
-
+        return Gson().fromJson(value, listType)
     }
-
 }

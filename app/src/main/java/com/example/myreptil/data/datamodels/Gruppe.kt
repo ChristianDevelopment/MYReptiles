@@ -10,5 +10,4 @@ data class Gruppe(
     var Name: String,
     var tiereInGruppe: MutableList<Tier>
 
-
 )
