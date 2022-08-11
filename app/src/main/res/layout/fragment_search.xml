@@ -35,22 +35,6 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/MTiere"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/pattaya"
-            android:shadowColor="#000000"
-            android:shadowDx="5"
-            android:shadowDy="5"
-            android:shadowRadius="5"
-            android:text="Tiere"
-            android:textColor="#89AC2E"
-            android:textSize="30sp"
-            app:layout_constraintTop_toBottomOf="@+id/HeadLine"
-            tools:layout_editor_absoluteX="273dp" />
-
-        <TextView
             android:id="@+id/MGruppe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -78,18 +62,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/background_shade" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_rv_layout"
-            android:layout_width="360dp"
-            android:layout_height="588dp"
-            android:layout_marginTop="55dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/HeadLine"
-            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-            app:spanCount="2"
-            tools:listitem="@layout/pattern" />
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/sucheConstraint"
             android:layout_width="match_parent"
@@ -100,30 +72,50 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="200dp"
-                android:text="Button"
+                android:backgroundTint="#000000"
+                app:strokeColor="#689F38"
+                app:strokeWidth="2dp"
+                android:text="Suchen"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/sucheLayout" />
+                app:layout_constraintTop_toBottomOf="@+id/sucheLayout"
+                 />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/sucheLayout"
-                android:layout_width="311dp"
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="100dp"
+                android:backgroundTint="#000000"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="#689F38"
+                app:strokeWidth="2dp">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/sucheText"
-                    android:layout_width="match_parent"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/sucheLayout"
+                    android:layout_width="300dp"
                     android:layout_height="wrap_content"
-                    android:hint="Suche..." />
+                    android:layout_marginTop="100dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-            </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/sucheText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Suche..." />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
