@@ -1,11 +1,13 @@
 package com.example.myreptil.ui
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.example.myreptil.R
 import com.example.myreptil.adapter.ItemAdapterTier
 import com.example.myreptil.databinding.FragmentGruppenTiereBinding
@@ -34,11 +36,21 @@ class GruppenTiereFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        var gruppenId = requireArguments().getLong("gruppenId")
+        val gruppenId = requireArguments().getLong("gruppenId")
 
-        var gruppe = viewModel.gruppenList.value!!.find { it.id == gruppenId }
+        viewModel.gruppenList.observe(viewLifecycleOwner){ liste ->
 
-        binding.rvRvLayout.adapter = ItemAdapterTier(gruppe!!.tiereInGruppe,false)
+            Log.d("TESTTEST","id: $id, gruppenListe größe ${liste.size}")
+            val gruppe = liste.find { it.id == gruppenId }
+
+
+            val navigate: (Long) -> Unit = {id -> findNavController().navigate(GruppenTiereFragmentDirections.actionFragmentGruppenTiereToShowDetailCardFragment(id))}
+
+
+            binding.rvRvLayout.adapter = ItemAdapterTier(gruppe!!.tiereInGruppe,navigate)
+
+        }
+
 
     }
 

@@ -66,7 +66,7 @@ class gruppeSave : Fragment() {
                         viewModel.saveGruppeData(
                             gruppe
                         )
-                        findNavController().navigate(gruppeSaveDirections.actionGruppeSaveToFragmentGruppenTiere(gruppe.id))
+                        findNavController().navigate(gruppeSaveDirections.actionGruppeSaveToGruppenFragment())
                     }
                     .show()
 

@@ -37,7 +37,10 @@ class Fragment_Tiere : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel.tierList.observe(viewLifecycleOwner){
-            binding.rvRvLayout.adapter = ItemAdapterTier(it,false)
+
+            val navigate: (Long) -> Unit = {id -> findNavController().navigate(Fragment_TiereDirections.actionFragmentTiereToShowDetailCardFragment(id))}
+
+            binding.rvRvLayout.adapter = ItemAdapterTier(it,navigate)
 
         }
 

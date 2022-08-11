@@ -16,7 +16,7 @@ import com.example.myreptil.databinding.FragmentGruppenBinding
 class GruppenFragment : Fragment() {
 
     private lateinit var binding: FragmentGruppenBinding
-    private val viewModel : ViewModel by activityViewModels()
+    private val viewModel: ViewModel by activityViewModels()
 
 
     override fun onCreateView(
@@ -37,7 +37,7 @@ class GruppenFragment : Fragment() {
 
         var navigation:(Long)->Unit ={ id->findNavController().navigate(GruppenFragmentDirections.actionGruppenFragmentToFragmentGruppenTiere(id))}
 
-        viewModel.gruppenList.observe(viewLifecycleOwner){
+        viewModel.gruppenList.observe(viewLifecycleOwner) {
 
             binding.rvRvLayout.adapter = ItemAdapterGruppe(it, navigation)
 

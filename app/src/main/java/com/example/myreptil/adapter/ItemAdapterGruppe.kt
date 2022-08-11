@@ -49,14 +49,9 @@ class ItemAdapterGruppe(
         holder.textView.text = itemGruppe.Name
 
         holder.patternButton.setOnClickListener{
-        navigation(itemGruppe.id)
+            navigation(itemGruppe.id)
         }
 
-        // macht keinen sinn von item aus navigieren. muss gruppen header click
-//        holder.itemView.setOnClickListener {
-//            var navController = holder.itemView.findNavController()
-//            navController.navigate(GruppenFragmentDirections.actionFragmentGruppenToFragmentGruppentiere())
-//        }
     }
 
     // damit der LayoutManager weiß wie lang die Liste ist

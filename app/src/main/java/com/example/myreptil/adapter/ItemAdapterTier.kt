@@ -13,7 +13,8 @@ import com.example.myreptil.R
 import com.example.myreptil.ui.Fragment_TiereDirections
 import com.example.myreptil.ui.SearchFragmentDirections
 
-class ItemAdapterTier(private val dataset: List<Tier>, private val callSearchFragment: Boolean) :
+class ItemAdapterTier(private val dataset: List<Tier>,
+                      private val navigate: (Long) -> Unit) :
     RecyclerView.Adapter<ItemAdapterTier.ItemViewHolder>() {
 
     inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -61,30 +62,12 @@ class ItemAdapterTier(private val dataset: List<Tier>, private val callSearchFra
 
 
         holder.image.setImageResource(imageRes)  //<- Liefert Bild des Tieres
-        if (callSearchFragment) {
-            holder.image.setOnClickListener {
-
-                holder.itemView.findNavController()
-                    .navigate(
-                        SearchFragmentDirections.actionSearchFragmentToShowDetailCardFragment(
-                            tier.id
-                        )
-                    )
-            }
-
-        } else {
 
 
-            holder.image.setOnClickListener {
-
-                holder.itemView.findNavController()
-                    .navigate(
-                        Fragment_TiereDirections.actionFragmentTiereToShowDetailCardFragment(tier.id)
-
-
-                    )
-            }
+        holder.image.setOnClickListener {
+            navigate(tier.id)
         }
+
     }
 
     //liefert die anzahl der Tier (Liste)

@@ -36,6 +36,9 @@
         <argument
             android:name="gruppenId"
             app:argType="long" />
+        <action
+            android:id="@+id/action_fragment_GruppenTiere_to_showDetailCardFragment"
+            app:destination="@id/showDetailCardFragment" />
     </fragment>
     <fragment
         android:id="@+id/fragment_Tiere"
@@ -92,6 +95,9 @@
         <action
             android:id="@+id/action_gruppeSave_to_fragment_GruppenTiere"
             app:destination="@id/fragment_GruppenTiere" />
+        <action
+            android:id="@+id/action_gruppeSave_to_gruppenFragment"
+            app:destination="@id/gruppenFragment" />
     </fragment>
     <fragment
         android:id="@+id/showDetailCardFragment"

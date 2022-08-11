@@ -7,7 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.Navigation.findNavController
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.example.myreptil.adapter.ItemAdapterTier
 import com.example.myreptil.databinding.FragmentSearchBinding
 
@@ -43,8 +45,10 @@ class SearchFragment : Fragment() {
             binding.sucheConstraint.visibility = View.INVISIBLE
             viewModel.tierList.observe(viewLifecycleOwner) {
 
+                val navigate: (Long) -> Unit = {id -> findNavController().navigate(SearchFragmentDirections.actionSearchFragmentToShowDetailCardFragment(id))}
+
                 var list = viewModel.search(binding.sucheText.text.toString())
-                var itemAdapter = ItemAdapterTier(list, true)
+                var itemAdapter = ItemAdapterTier(list, navigate)
                 binding.rvRvLayout.adapter = itemAdapter
             }
         }
