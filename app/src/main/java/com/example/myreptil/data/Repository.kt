@@ -15,7 +15,10 @@ class Repository(private val dataBase: TierDataBase) {
 
     val tierListe: LiveData<List<Tier>> = dataBase.tierDataBaseDao.getAllFromTierTable()
 
-// speichert ein Tier in die Datenbank
+    val gruppenListe: LiveData<MutableList<Gruppe>> = dataBase.tierDataBaseDao.getAllFromGruppenTable()
+
+
+    // speichert ein Tier in die Datenbank
     suspend fun insert(tier: Tier) {
 
         try {
@@ -56,7 +59,7 @@ class Repository(private val dataBase: TierDataBase) {
 
         return dataBase.tierDataBaseDao.getAllFromEintragTable()
     }
-// Updatet alle einträge
+// Updatet alle einträge von tier
     suspend fun update(tier: Tier) {
 
         try {
@@ -66,6 +69,18 @@ class Repository(private val dataBase: TierDataBase) {
         }
 
     }
+
+    // Updatet alle einträge von Gruppe
+    suspend fun update(gruppe: Gruppe) {
+
+        try {
+            dataBase.tierDataBaseDao.update(gruppe)
+        } catch (e: Exception) {
+            Log.d("Repository", "Folgendes ist falsch gelaufen:$e")
+        }
+
+    }
+
 // löscht einträge aus der Datenbank
     suspend fun delete(tier: Tier) {
 

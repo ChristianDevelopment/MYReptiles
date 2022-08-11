@@ -11,7 +11,7 @@ class Converters {
     //erstellt ein Gson und convertiert die Liste in einen String (ist da das man in Datenbank abspeichern kann)
 
     @TypeConverter
-    fun listOfItemsToString(items: List<Tier>): String? {
+    fun listOfItemsToString(items: MutableList<Tier>): String? {
         var gson = Gson()
         return gson.toJson(items)
     }
@@ -19,7 +19,7 @@ class Converters {
 
     // wandelt den String wieder um in die Liste um
     @TypeConverter
-    fun fromString(value: String?): List<Tier> {
+    fun fromString(value: String?): MutableList<Tier> {
 
         val listType = object : TypeToken<ArrayList<Tier?>?>() {}.type
 

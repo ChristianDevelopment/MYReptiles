@@ -8,7 +8,7 @@ data class Gruppe(
     @PrimaryKey(autoGenerate = true)
     val id: Long = 0,
     var Name: String,
-    var gruppenTiereId: List<Tier>
+    var tiereInGruppe: MutableList<Tier>
 
 
 )

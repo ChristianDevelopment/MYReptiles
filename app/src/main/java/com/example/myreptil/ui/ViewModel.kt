@@ -23,23 +23,25 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
 
     val tierList = repository.tierListe  //<- tierListe vom Repository
 
+    val gruppenList = repository.gruppenListe  //<- gruppenListe vom Repository
+
     fun search(suchBegriff: String): List<Tier> {
 
         return repository.search(suchBegriff)
     }
 
     // ruft die Funktion Speichern aus der Datenbank auf (über das Repository (aus dem DAO) )
-     fun saveTierData (tier: Tier) {
+    fun saveTierData(tier: Tier) {
 
-         viewModelScope.launch {
+        viewModelScope.launch {
 
-             repository.insert(tier)
+            repository.insert(tier)
 
-         }
-     }
+        }
+    }
 // ruft die Funktion Speichern aus der Datenbank auf (über das Repository (aus dem DAO) )
 
-    fun saveGruppeData (gruppe: Gruppe) {
+    fun saveGruppeData(gruppe: Gruppe) {
 
         viewModelScope.launch {
 
@@ -47,4 +49,26 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
 
         }
     }
+
+    fun delete(tier: Tier) {
+        viewModelScope.launch {
+            repository.delete(tier)
+        }
+
+        // entfernt ein gruppentier aus der gruppe wenn es ein tier ist das man löschen möchte ***********
+
+        for (gruppe in gruppenList.value!!) {
+            for (gruppenTier in gruppe.tiereInGruppe){
+                if (tier == gruppenTier){
+                    gruppe.tiereInGruppe.remove(gruppenTier)
+                }
+            }
+
+            viewModelScope.launch {
+                repository.update(gruppe)
+            }
+
+        }
+    }
 }
+

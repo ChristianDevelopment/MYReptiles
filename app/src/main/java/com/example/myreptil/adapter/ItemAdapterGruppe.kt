@@ -11,17 +11,17 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.myreptil.data.datamodels.Tier
 import com.example.myreptil.data.datamodels.TierartEnum
 import com.example.myreptil.R
+import com.example.myreptil.data.datamodels.Gruppe
 
 // der Adapter braucht den Context um auf String Resourcen zuzugreifen
 // und die Liste an Jokes um sie für die RecyclerView vorzubereiten
 class ItemAdapterGruppe(
-    private val context: Context,
-    private val dataset: List<Tier>,
-    private val pattern_click : (TierartEnum)->Unit
-) : RecyclerView.Adapter<ItemAdapterGruppe.ItemViewHolder>() {
+    private val dataset: List<Gruppe>
+    ) : RecyclerView.Adapter<ItemAdapterGruppe.ItemViewHolder>() {
 
     // IDEE VON VIEWHOLDERN
     // der ViewHolder weiß welche Teile des Layouts beim Recycling angepasst werden
+
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         val textView: TextView = view.findViewById(R.id.tv_pattern)
         val imageView: ImageView = view.findViewById(R.id.iv_pattern)
@@ -30,9 +30,11 @@ class ItemAdapterGruppe(
 
     // ERSTELLEN VON VIEWHOLDERN
     // hier werden neue ViewHolder erstellt
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
 
         // das itemLayout wird gebaut
+
         val adapterLayout = LayoutInflater.from(parent.context)
             .inflate(R.layout.pattern, parent, false)
 
@@ -43,12 +45,13 @@ class ItemAdapterGruppe(
     // BEFÜLLEN VON VIEWHOLDERN
     // hier findet der Recyclingprozess statt
     // die vom ViewHolder bereitgestellten Parameter werden verändert
+
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-        val item = dataset[position]
-        holder.textView.text = item.Name
-        holder.imageView.setImageResource(item.Image)
+        val itemGruppe = dataset[position]
+        holder.textView.text = itemGruppe.Name
+
         holder.patternButton.setOnClickListener{
-            pattern_click(item.Tierart)
+
         }
 
         // macht keinen sinn von item aus navigieren. muss gruppen header click

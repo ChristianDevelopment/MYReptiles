@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import com.example.myreptil.R
+import com.example.myreptil.data.datamodels.Gruppe
+import com.example.myreptil.data.datamodels.Tier
 import com.example.myreptil.databinding.FragmentGruppeSaveBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
@@ -27,22 +29,41 @@ class gruppeSave : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.tierList.observe(viewLifecycleOwner){ liste->
-            binding.IBgruppenSave.setOnClickListener{
+        viewModel.tierList.observe(viewLifecycleOwner) { liste ->
+            binding.IBgruppenSave.setOnClickListener {
 
                 var tierNamen = mutableListOf<String>()
                 var selected = mutableListOf<Boolean>()
 
-                for (tier in liste){
+                for (tier in liste) {
                     tierNamen.add(tier.Name)
                     selected.add(false)
                 }
 
                 MaterialAlertDialogBuilder(requireContext())
-                    .setMultiChoiceItems(tierNamen.toTypedArray(),selected.toBooleanArray()){
-                        _,_,_,-> }
+                    .setMultiChoiceItems(
+                        tierNamen.toTypedArray(),
+                        selected.toBooleanArray()
+                    ) { _, which, checked -> selected[which] = checked }
                     .setTitle("Tier Auswahl")
+                    .setPositiveButton("Speichern") { _, _ ->
 
+                        var gruppenTierListe = mutableListOf<Tier>()
+
+                        for (i in selected.indices) {
+                            if (selected[i]) {
+                                gruppenTierListe.add(liste[i])
+                            }
+                        }
+
+                        viewModel.saveGruppeData(
+                            Gruppe(
+                                Name = binding.gruppenNameSave.text.toString(),
+                                tiereInGruppe = gruppenTierListe
+                            )
+                        )
+                    //TODO navigation machen von gruppensave zu gruppentiere
+                    }
                     .show()
 
             }
