@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.example.myreptil.R
 import com.example.myreptil.data.datamodels.Gruppe
 import com.example.myreptil.data.datamodels.Tier
@@ -56,13 +57,16 @@ class gruppeSave : Fragment() {
                             }
                         }
 
-                        viewModel.saveGruppeData(
-                            Gruppe(
-                                Name = binding.gruppenNameSave.text.toString(),
-                                tiereInGruppe = gruppenTierListe
-                            )
+                        var gruppe = Gruppe(
+                            Name = binding.gruppenNameSave.text.toString(),
+                            tiereInGruppe = gruppenTierListe
                         )
-                    //TODO navigation machen von gruppensave zu gruppentiere
+
+
+                        viewModel.saveGruppeData(
+                            gruppe
+                        )
+                        findNavController().navigate(gruppeSaveDirections.actionGruppeSaveToFragmentGruppenTiere(gruppe.id))
                     }
                     .show()
 
