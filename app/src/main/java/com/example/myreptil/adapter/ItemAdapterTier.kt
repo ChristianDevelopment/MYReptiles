@@ -6,13 +6,10 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myreptil.data.datamodels.Tier
 import com.example.myreptil.data.datamodels.TierartEnum
 import com.example.myreptil.R
-import com.example.myreptil.databinding.FragmentSearchBinding
-import com.example.myreptil.databinding.FragmentTiereBinding
 import com.example.myreptil.ui.Fragment_TiereDirections
 import com.example.myreptil.ui.SearchFragmentDirections
 

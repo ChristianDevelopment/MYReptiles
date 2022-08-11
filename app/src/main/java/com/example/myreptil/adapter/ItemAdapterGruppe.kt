@@ -1,6 +1,5 @@
 package com.example.myreptil.adapter
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,24 +7,23 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
-import com.example.myreptil.data.datamodels.Tier
-import com.example.myreptil.data.datamodels.TierartEnum
 import com.example.myreptil.R
 import com.example.myreptil.data.datamodels.Gruppe
 
 // der Adapter braucht den Context um auf String Resourcen zuzugreifen
 // und die Liste an Jokes um sie für die RecyclerView vorzubereiten
 class ItemAdapterGruppe(
-    private val dataset: List<Gruppe>
-    ) : RecyclerView.Adapter<ItemAdapterGruppe.ItemViewHolder>() {
+    private val dataset: List<Gruppe>,
+    private val navigation: (Long)->Unit
+) : RecyclerView.Adapter<ItemAdapterGruppe.ItemViewHolder>() {
 
     // IDEE VON VIEWHOLDERN
     // der ViewHolder weiß welche Teile des Layouts beim Recycling angepasst werden
 
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
-        val textView: TextView = view.findViewById(R.id.tv_pattern)
-        val imageView: ImageView = view.findViewById(R.id.iv_pattern)
-        val patternButton : ConstraintLayout = view.findViewById(R.id.pattern_button)
+        val textView: TextView = view.findViewById(R.id.tv_patternGruppe)
+        val imageView: ImageView = view.findViewById(R.id.iv_patternGruppe)
+        val patternButton : ConstraintLayout = view.findViewById(R.id.patternGruppe_button)
     }
 
     // ERSTELLEN VON VIEWHOLDERN
@@ -36,7 +34,7 @@ class ItemAdapterGruppe(
         // das itemLayout wird gebaut
 
         val adapterLayout = LayoutInflater.from(parent.context)
-            .inflate(R.layout.pattern, parent, false)
+            .inflate(R.layout.pattern_gruppe, parent, false)
 
         // und in einem ViewHolder zurückgegeben
         return ItemViewHolder(adapterLayout)
@@ -51,7 +49,7 @@ class ItemAdapterGruppe(
         holder.textView.text = itemGruppe.Name
 
         holder.patternButton.setOnClickListener{
-
+        navigation(itemGruppe.id)
         }
 
         // macht keinen sinn von item aus navigieren. muss gruppen header click

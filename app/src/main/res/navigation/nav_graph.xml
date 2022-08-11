@@ -31,8 +31,12 @@
     </fragment>
     <fragment
         android:id="@+id/fragment_GruppenTiere"
-        android:name="com.example.myreptil.ui.Fragment_GruppenTiere"
-        android:label="Fragment_GruppenTiere" />
+        android:name="com.example.myreptil.ui.GruppenTiereFragment"
+        android:label="Fragment_GruppenTiere" >
+        <argument
+            android:name="gruppenId"
+            app:argType="long" />
+    </fragment>
     <fragment
         android:id="@+id/fragment_Tiere"
         android:name="com.example.myreptil.ui.Fragment_Tiere"
@@ -81,11 +85,6 @@
         android:name="com.example.myreptil.MainActivity"
         android:label="fragment_first"
         tools:layout="@layout/fragment_first" />
-    <fragment
-        android:id="@+id/gruppeTiereSaveFragment2"
-        android:name="com.example.myreptil.ui.gruppeTiereSaveFragment"
-        android:label="fragment_gruppe_tiere_save"
-        tools:layout="@layout/fragment_gruppe_tiere_save" />
     <fragment
         android:id="@+id/gruppeSave"
         android:name="com.example.myreptil.ui.gruppeSave"

@@ -35,14 +35,17 @@ class GruppenFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        var navigation:(Long)->Unit ={ id->findNavController().navigate(GruppenFragmentDirections.actionGruppenFragmentToFragmentGruppenTiere(id))}
+
         viewModel.gruppenList.observe(viewLifecycleOwner){
 
-            binding.rvRvLayout.adapter = ItemAdapterGruppe(it)
+            binding.rvRvLayout.adapter = ItemAdapterGruppe(it, navigation)
 
         }
 
 
         // OnklickListener für die navigation vom GruppenFragment zum Gruppen Tiere Fragment
+
         binding.MTiere.setOnClickListener {
 
             findNavController().navigate(GruppenFragmentDirections.actionGruppenFragmentToFragmentTiere())
